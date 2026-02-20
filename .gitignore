@@ -17,4 +17,4 @@ yarn-debug.log*
 yarn-error.log*
 
 # OS files
-.DS_Store
+.DS_Storenode_modules/
