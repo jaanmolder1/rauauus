@@ -1,0 +1,107 @@
+import type { Config } from "tailwindcss";
+
+const config: Config = {
+  content: [
+    "./pages/**/*.{js,ts,jsx,tsx,mdx}",
+    "./components/**/*.{js,ts,jsx,tsx,mdx}",
+    "./app/**/*.{js,ts,jsx,tsx,mdx}",
+  ],
+  theme: {
+    extend: {
+      colors: {
+        stone: {
+          50: "#faf8f5",
+          100: "#f5f0e8",
+          200: "#e8ddd0",
+          300: "#d4c4b0",
+          400: "#b8a48c",
+          500: "#9c8670",
+          600: "#7d6a56",
+          700: "#5e5041",
+          800: "#3d3329",
+          900: "#1e1a14",
+          950: "#0f0d0a",
+        },
+        bronze: {
+          DEFAULT: "#8b7355",
+          light: "#a68b6a",
+          dark: "#6b563f",
+        },
+      },
+      fontFamily: {
+        serif: ["var(--font-cormorant)", "Georgia", "serif"],
+        sans: ["var(--font-inter)", "system-ui", "sans-serif"],
+      },
+      fontSize: {
+        "2xs": ["0.625rem", { lineHeight: "1rem", letterSpacing: "0.15em" }],
+        xs: ["0.75rem", { lineHeight: "1.25rem", letterSpacing: "0.12em" }],
+        sm: ["0.875rem", { lineHeight: "1.5rem", letterSpacing: "0.03em" }],
+        base: ["1rem", { lineHeight: "1.75rem", letterSpacing: "0.01em" }],
+        lg: ["1.125rem", { lineHeight: "1.875rem", letterSpacing: "0.01em" }],
+        xl: ["1.25rem", { lineHeight: "2rem", letterSpacing: "0em" }],
+        "2xl": ["1.5rem", { lineHeight: "2.25rem", letterSpacing: "-0.01em" }],
+        "3xl": ["1.875rem", { lineHeight: "2.5rem", letterSpacing: "-0.02em" }],
+        "4xl": ["2.25rem", { lineHeight: "2.75rem", letterSpacing: "-0.02em" }],
+        "5xl": ["3rem", { lineHeight: "1.15", letterSpacing: "-0.03em" }],
+        "6xl": ["3.75rem", { lineHeight: "1.1", letterSpacing: "-0.03em" }],
+        "7xl": ["4.5rem", { lineHeight: "1.05", letterSpacing: "-0.04em" }],
+        "8xl": ["6rem", { lineHeight: "1", letterSpacing: "-0.04em" }],
+      },
+      spacing: {
+        "18": "4.5rem",
+        "22": "5.5rem",
+        "26": "6.5rem",
+        "30": "7.5rem",
+        "34": "8.5rem",
+        "38": "9.5rem",
+        "42": "10.5rem",
+        "46": "11.5rem",
+        "50": "12.5rem",
+        "54": "13.5rem",
+        "58": "14.5rem",
+        "62": "15.5rem",
+        "66": "16.5rem",
+        "70": "17.5rem",
+        "74": "18.5rem",
+        "78": "19.5rem",
+        "82": "20.5rem",
+        "86": "21.5rem",
+        "90": "22.5rem",
+        "94": "23.5rem",
+        "100": "25rem",
+        "104": "26rem",
+        "108": "27rem",
+        "112": "28rem",
+        "116": "29rem",
+        "120": "30rem",
+      },
+      maxWidth: {
+        "8xl": "88rem",
+        "9xl": "96rem",
+        "screen-2xl": "1440px",
+      },
+      letterSpacing: {
+        widest: "0.25em",
+        "ultra-wide": "0.3em",
+      },
+      transitionDuration: {
+        "400": "400ms",
+        "600": "600ms",
+        "800": "800ms",
+      },
+      transitionTimingFunction: {
+        "out-expo": "cubic-bezier(0.19, 1, 0.22, 1)",
+        "in-out-expo": "cubic-bezier(0.87, 0, 0.13, 1)",
+      },
+      aspectRatio: {
+        "3/4": "3 / 4",
+        "4/3": "4 / 3",
+        "5/4": "5 / 4",
+        "16/10": "16 / 10",
+      },
+    },
+  },
+  plugins: [],
+};
+
+export default config;
