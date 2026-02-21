@@ -25,7 +25,7 @@ export default function AjaluguPage() {
         imageAlt="Raua 22 ajaloolised arhitektuuridetailid"
         overlay="dark"
         height="large"
-        align="bottom-left"
+        align="left"
       />
 
       {/* Timeline intro */}

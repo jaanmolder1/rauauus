@@ -75,12 +75,12 @@ const apartments = [
   {
     id: "apt-4",
     number: "Korter 4",
-    title: "Kahe rõduga korter — Hele ja privaatne",
+    title: "Valgusküllane korter kahe rõduga – privaatne ja avar",
     area: "89 m²",
     floor: "2. korrus",
     rooms: "3 tuba",
     description:
-      "Kaks rõdu (19,5 m² ja 12,9 m², kokku üle 32 m²) annavad sellele teise korruse korterile erandliku heleduse ja välitila. Kaks magamistuba ning avar köök-elutuba (33,4 m²) on sujuvalt planeeritud. Parkimine hoovis tagab igapäevase mugavuse.",
+      "See teise korruse korter paistab silma erakordselt heleda ja õhuka atmosfääriga ning kahe rõduga (19,5 m² ja 12,9 m², kokku üle 32 m²), mis pakuvad mõnusat väliruumi ja päikesevalgust. Korteris on kaks mugavat magamistuba ning avar köök-elutuba (33,4 m²), kus on ideaalne kombineerida kokkamist ja ajaveetmist.",
     features: [
       "2 rõdu (kokku 32 m²)",
       "2 magamistuba",
@@ -94,12 +94,12 @@ const apartments = [
   {
     id: "apt-5",
     number: "Korter 5",
-    title: "Perekorter — Terrassiga tippkorter",
+    title: "Eksklusiivne Penthouse – Privaatne terrass ja panoraamvaade",
     area: "117 m²",
     floor: "3. korrus",
     rooms: "4 tuba",
     description:
-      "Suurim korter majas pakub perekonnale ruumi ja privaatsust. Avara terrassiga (29,7 m²) tippkorter vaadetega piirkonna puiestee roheluse üle, kolm eraldatud magamistuba, kaks vannituba ja köök-elutuba (38,1 m²) — ainulaadne kombinatsioon linnakeskkonnas.",
+      "See 117 m² suurune avar korter paistab silma valguse, avaruse ja erakordsete vaadetega. 29,7 m² suurune terrass pakub panoraamvaateid piirkonna puiestee rohelusele. Korteris on kolm eraldatud magamistuba, kaks vannituba ning avar köök-elutuba (38,1 m²) – ideaalne kombinatsioon ruumikusest ja linnakeskkonna mugavusest.",
     features: [
       "Terrass 29,7 m²",
       "3 magamistuba",
@@ -123,7 +123,7 @@ export default function KorteridPage() {
         imageAlt="Raua 22 korterite interjöör"
         overlay="dark"
         height="large"
-        align="center"
+        align="left"
       />
 
       {/* Intro */}

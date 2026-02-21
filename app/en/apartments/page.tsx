@@ -123,7 +123,7 @@ export default function ApartmentsPage() {
         imageAlt="Raua 22 apartment interior"
         overlay="dark"
         height="large"
-        align="center"
+        align="left"
       />
 
       {/* Intro stats */}

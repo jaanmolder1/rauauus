@@ -25,7 +25,7 @@ export default function HistoryPage() {
         imageAlt="Raua 22 historical architectural details"
         overlay="dark"
         height="large"
-        align="bottom-left"
+        align="left"
       />
 
       {/* Timeline intro */}

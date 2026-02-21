@@ -35,7 +35,15 @@ export default function Navbar({ lang }: NavbarProps) {
 
   const navItems = lang === "et" ? navItemsEt : navItemsEn;
   const altLang = lang === "et" ? "en" : "et";
-  const altPath = pathname.replace(`/${lang}`, `/${altLang}`);
+
+  const slugMap: Record<string, Record<string, string>> = {
+    et: { tutvustus: "overview", ajalugu: "history", korterid: "apartments", kontakt: "contact" },
+    en: { overview: "tutvustus", history: "ajalugu", apartments: "korterid", contact: "kontakt" },
+  };
+
+  const slug = pathname.split("/").filter(Boolean)[1];
+  const translatedSlug = slug ? (slugMap[lang]?.[slug] ?? slug) : undefined;
+  const altPath = translatedSlug ? `/${altLang}/${translatedSlug}` : `/${altLang}`;
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 40);

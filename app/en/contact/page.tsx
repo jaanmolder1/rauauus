@@ -23,8 +23,8 @@ export default function ContactPage() {
         imageSrc="/images/building-courtyard.jpeg"
         imageAlt="Raua 22 courtyard garden"
         overlay="dark"
-        height="medium"
-        align="center"
+        height="large"
+        align="left"
       />
 
       {/* Contact section */}

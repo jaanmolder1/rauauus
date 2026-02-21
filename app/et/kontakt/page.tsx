@@ -23,8 +23,8 @@ export default function KontaktPage() {
         imageSrc="/images/building-courtyard.jpeg"
         imageAlt="Raua 22 hooviaedik"
         overlay="dark"
-        height="medium"
-        align="center"
+        height="large"
+        align="left"
       />
 
       {/* Contact section */}
