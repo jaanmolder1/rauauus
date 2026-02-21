@@ -4,12 +4,12 @@ import Link from "next/link";
 import HeroSection from "@/components/HeroSection";
 
 export const metadata: Metadata = {
-  title: "Apartments — Raua 22 | Kadriorg, Tallinn",
+  title: "Apartments — Raua 22 | Raua asum, Tallinn",
   description:
-    "Five exclusive apartments at Raua 22, Kadriorg — from 65 to 145 square metres, with high ceilings, restored original floors and modern comfort in a listed heritage building.",
+    "Five exclusive apartments at Raua 22, Raua asum — from 65 to 145 square metres, with high ceilings, restored original floors and modern comfort in a listed heritage building.",
   openGraph: {
     title: "Apartments — Raua 22",
-    description: "Five exclusive residences from 65–145 m² in Kadriorg's listed heritage building.",
+    description: "Five exclusive residences from 65–145 m² in Raua asum's listed heritage building.",
     locale: "en_GB",
   },
 };
@@ -37,12 +37,12 @@ const apartments = [
   {
     id: "apt-3",
     number: "Apartment 3",
-    title: "Generous three-room — classical Kadriorg",
+    title: "Generous three-room — the character of Raua asum",
     area: "112 m²",
     floor: "Second floor",
     rooms: "3 rooms",
     description:
-      "A spacious second-floor apartment offering the classic Kadriorg quality of life. A separate living and dining room, independent bedrooms, acoustically upgraded windows and high ceilings that emphasise the building's historical dignity.",
+      "A spacious second-floor apartment that embodies the measured quality of life Raua asum is known for. A separate living and dining room, independent bedrooms, acoustically upgraded windows and high ceilings that emphasise the building's historical dignity.",
     features: [
       "High ceilings (3.3 m)",
       "Separate living room",
@@ -61,13 +61,13 @@ const apartments = [
     floor: "Third floor",
     rooms: "4 rooms",
     description:
-      "The largest apartment in the building offers a family both space and privacy. A generous terrace with views over the Kadriorg tree canopy, four independent rooms, two bathrooms and a private garden — an unusual combination in an urban setting.",
+      "The largest apartment in the building offers a family both space and privacy. A generous terrace with views over the neighbourhood's tree canopy, four independent rooms, two bathrooms and a private garden — an unusual combination in an urban setting.",
     features: [
       "Private terrace",
       "Two bathrooms",
       "Fireplace",
       "Preserved period details",
-      "Views over Kadriorg",
+      "Views over the tree canopy",
       "Courtyard parking",
     ],
     imageSrc: "/images/raua22-render.png",

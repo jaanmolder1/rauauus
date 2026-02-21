@@ -5,20 +5,20 @@ import HeroSection from "@/components/HeroSection";
 import { jsonLdProperty, jsonLdOrganization } from "@/lib/metadata";
 
 export const metadata: Metadata = {
-  title: "Raua 22 | Kadriorg, Tallinn",
+  title: "Raua 22 | Raua asum, Tallinn",
   description:
-    "Viis erakordset korterit muinsuskaitsealuses ajaloolises hoones Kadrioru südames. Arhitektuuripärand, mis on uuendatud kaasaegse elukvaliteedi standarditele.",
+    "Viis erakordset korterit muinsuskaitsealuses ajaloolises hoones Raua asumis, Tallinnas. Arhitektuuripärand, mis on uuendatud kaasaegse elukvaliteedi standarditele.",
   keywords: [
-    "Kadriorg korterid",
+    "Raua asum korterid",
     "muinsuskaitsealune hoone Tallinn",
-    "eksklusiivne kinnisvara Kadriorg",
+    "eksklusiivne kinnisvara Raua asum",
     "ajaloolised korterid Tallinn",
     "Raua tänav kinnisvara",
   ],
   openGraph: {
-    title: "Raua 22 — Kadriorg, Tallinn",
+    title: "Raua 22 — Raua asum, Tallinn",
     description:
-      "Viis erakordset korterit muinsuskaitsealuses ajaloolises hoones Kadrioru südames.",
+      "Viis erakordset korterit muinsuskaitsealuses ajaloolises hoones Raua asumis, Tallinnas.",
     locale: "et_EE",
   },
 };
@@ -35,13 +35,13 @@ export default function EtHomePage() {
 
       {/* Hero */}
       <HeroSection
-        eyebrow="Kadriorg · Tallinn"
+        eyebrow="Raua asum · Tallinn"
         title="Kodu, mis on enamat kui elukoht"
         subtitle="Viis erakordset korterit muinsuskaitsealuses ajaloolises hoones. Arhitektuurne pärand, uuendatud elamiseks tänapäeval."
         ctaLabel="Tutvu kortermajaga"
         ctaHref="/et/tutvustus"
         imageSrc="/images/building-exterior.jpeg"
-        imageAlt="Raua 22 hoone välisilme — Kadriorg, Tallinn"
+        imageAlt="Raua 22 hoone välisilme — Raua asum, Tallinn"
         overlay="dark"
         height="full"
         align="center"
@@ -54,7 +54,7 @@ export default function EtHomePage() {
             <p className="label-eyebrow text-stone-500 mb-8">Raua 22</p>
             <h2 className="font-serif font-light text-stone-100 leading-[1.15] mb-8"
               style={{ fontSize: "clamp(1.75rem, 3vw, 2.75rem)" }}>
-              Kadriorg on Tallinna üks väärikamaid ja otsituimaid elamupiirkondi. Raua 22 on selle vaimu kehastus — hoone, mis räägib ajaloost, kuid on loodud tulevikuks.
+              Raua asum on üks Tallinna vaiksemaid ja väärikamaid elamupiirkondi. Raua 22 on selle vaimu kehastus — hoone, mis räägib ajaloost, kuid on loodud tulevikuks.
             </h2>
             <p className="font-sans font-light text-stone-400 leading-[1.85]"
               style={{ fontSize: "clamp(0.9rem, 1.2vw, 1rem)" }}>
@@ -77,8 +77,8 @@ export default function EtHomePage() {
               },
               {
                 num: "02",
-                title: "Kadriorg",
-                body: "Elukoht ühes Tallinna prestiižsemas piirkonnas — jalutuskäigu kaugusel Kadriorust ja kesklinnast.",
+                title: "Raua asum",
+                body: "Elukoht ühes Tallinna väljakujunenud elamupiirkonnas — jalutuskäigu kaugusel Kadrioru pargist ja kesklinnast.",
               },
               {
                 num: "03",
@@ -129,7 +129,7 @@ export default function EtHomePage() {
               </h2>
               <div className="space-y-5 mb-10">
                 <p className="font-sans font-light text-stone-500 leading-[1.85] text-sm lg:text-base">
-                  Raua 22 hoone pärineb 20. sajandi algusest, mil Kadriorg kujunes Tallinna esinduslikuks elamupiirkonnaks. Algne arhitektuur on hoolikalt säilitatud — ornamentika, kõrglaed, suurakende proportsioonid ja puidu detailid on restaureeritud algupäraste materjalide ja tehnikatega.
+                  Raua 22 hoone pärineb 20. sajandi algusest, mil Raua asum kujunes üheks Tallinna otsituimaks elamupiirkonnaks. Algne arhitektuur on hoolikalt säilitatud — ornamentika, kõrglaed, suurakende proportsioonid ja puidu detailid on restaureeritud algupäraste materjalide ja tehnikatega.
                 </p>
                 <p className="font-sans font-light text-stone-500 leading-[1.85] text-sm lg:text-base">
                   Samal ajal on korteritest saanud kaasaegsed kodud, kus puudub kompromiss mugavuste osas. Köögitehnika, küttesüsteemid, elekter ja akustiline isolatsioon vastavad kõrgeimate uusehitiste standarditele.
@@ -184,7 +184,7 @@ export default function EtHomePage() {
       <section className="relative py-40 overflow-hidden">
         <Image
           src="/images/kadriorg-view.png"
-          alt="Kadrioru park vaade"
+          alt="Vaade Raua asumile"
           fill
           className="object-cover object-center"
           sizes="100vw"

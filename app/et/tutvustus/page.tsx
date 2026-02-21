@@ -4,13 +4,13 @@ import Link from "next/link";
 import HeroSection from "@/components/HeroSection";
 
 export const metadata: Metadata = {
-  title: "Tutvustus — Raua 22 | Kadriorg, Tallinn",
+  title: "Tutvustus — Raua 22 | Raua asum, Tallinn",
   description:
-    "Raua 22 tutvustus — muinsuskaitsealune korterelamu Kadrioru südames. Viis erakordset eluruumi, kus ajalugu ja kaasaegne mugavus kohtuvad.",
+    "Raua 22 tutvustus — muinsuskaitsealune korterelamu Raua asumis, Tallinnas. Viis erakordset eluruumi, kus ajalugu ja kaasaegne mugavus kohtuvad.",
   openGraph: {
     title: "Tutvustus — Raua 22",
     description:
-      "Muinsuskaitsealune korterelamu Kadrioru südames. Viis erakordset eluruumi.",
+      "Muinsuskaitsealune korterelamu Raua asumis, Tallinnas. Viis erakordset eluruumi.",
     locale: "et_EE",
   },
 };
@@ -20,7 +20,7 @@ export default function TutvustusPage() {
     <>
       <HeroSection
         eyebrow="Tutvustus"
-        title="Kadriorg. Ajalugu. Elamiseks."
+        title="Raua asum. Ajalugu. Elamiseks."
         subtitle="Raua 22 on enamat kui hoone — see on kogemus, mis algab uksest sisse astudes."
         imageSrc="/images/building-exterior.jpeg"
         imageAlt="Raua 22 hoone fassaad"
@@ -39,7 +39,7 @@ export default function TutvustusPage() {
               Mitte iga hoone ei ela oma ajastu kauem üle. Raua 22 on seda teinud — ja teeb seda ka edaspidi.
             </h2>
             <p className="font-sans font-light text-stone-400 leading-[1.85] text-sm lg:text-base">
-              Muinsuskaitsealune hoone Kadrioru ajaloolises kvartalis on tunnistus püsivast väärtusest. Arhitektuurne iseloom, asukoha prestiiž ja hoolikas rekonstrueerimine loovad kokku elamiskeskkonna, mis ei vanane.
+              Muinsuskaitsealune hoone Raua asumi väljakujunenud elamukvartalis on tunnistus püsivast väärtusest. Arhitektuurne iseloom, asukoha prestiiž ja hoolikas rekonstrueerimine loovad kokku elamiskeskkonna, mis ei vanane.
             </p>
           </div>
         </div>
@@ -53,11 +53,11 @@ export default function TutvustusPage() {
               <p className="label-eyebrow mb-6">Asukoht</p>
               <h2 className="font-serif font-light text-stone-900 leading-tight mb-7"
                 style={{ fontSize: "clamp(2rem, 3vw, 2.75rem)" }}>
-                Kadrioru süda — Tallinna prestiižseim aadress
+                Raua asum — väljakujunenud aadress Tallinna südames
               </h2>
               <div className="space-y-5 mb-10">
                 <p className="font-sans font-light text-stone-500 leading-[1.85] text-sm lg:text-base">
-                  Raua tänav asub Kadrioru elamukvartali keskosas — vahetult pärast muuseumite ja Kadriorgu maha jäänud linnakära. Tänaval valitseb rahulik vaikus, mida ümbritsevad ajaloolised puiesteed ja piirkonnale iseloomulikud esinduslikud hooned.
+                  Raua tänav läbib Raua asumi südant — varakult 20. sajandil väljakujunenud elamupiirkonda, mida iseloomustavad ajaloolised tänavapuud ja ajastule omane arhitektuur. Tänaval valitsev vaikus on selle paiga loomulik osa; linnakiirus jääb mitmeastmelise vahemaa taha.
                 </p>
                 <p className="font-sans font-light text-stone-500 leading-[1.85] text-sm lg:text-base">
                   Kadriorgu park on jalutuskäigu kaugusel. Tallinna vanalinn ja kesklinn on kättesaadavad 10–15 minutiga jala. Ligipääs ühistranspordi peatustele ja peamistele magistraalidele on mugav, kuid igapäevaelu ei mõjuta liiklusest tingitud müra ega rahvamass.
@@ -70,7 +70,7 @@ export default function TutvustusPage() {
             <div className="relative aspect-[4/5] overflow-hidden">
               <Image
                 src="/images/kadriorg-view.png"
-                alt="Kadrioru park ja ümbrus"
+                alt="Raua asum ja ümbrus"
                 fill
                 className="object-cover object-center"
                 sizes="(max-width: 1024px) 100vw, 50vw"

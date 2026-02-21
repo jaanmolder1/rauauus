@@ -4,9 +4,9 @@ import Link from "next/link";
 import HeroSection from "@/components/HeroSection";
 
 export const metadata: Metadata = {
-  title: "History — Raua 22 | Kadriorg, Tallinn",
+  title: "History — Raua 22 | Raua asum, Tallinn",
   description:
-    "The history of Raua 22 — a listed architectural heritage building in Kadriorg that has undergone comprehensive restoration, preserving its original character for future generations.",
+    "The history of Raua 22 — a listed architectural heritage building in Raua asum, Tallinn, that has undergone comprehensive restoration, preserving its original character for future generations.",
   openGraph: {
     title: "History — Raua 22",
     description:
@@ -20,7 +20,7 @@ export default function HistoryPage() {
     <>
       <HeroSection
         eyebrow="History"
-        title="For over a century, this building has been written into Kadriorg's life"
+        title="For over a century, this building has been written into Raua asum's life"
         imageSrc="/images/building-detail.jpeg"
         imageAlt="Raua 22 historical architectural details"
         overlay="dark"
@@ -40,7 +40,7 @@ export default function HistoryPage() {
               A building that has endured through Tallinn's turbulent twentieth century — unchanged in its essential character.
             </h2>
             <p className="font-sans font-light text-stone-400 leading-[1.85] text-sm lg:text-base">
-              Raua 22 was built in the early 1910s, when Kadriorg was establishing itself as Tallinn's foremost residential district. The building was commissioned by a local merchant and industrial family whose ambition was to create a distinguished apartment building to the highest residential standards of the period. The architect remains unidentified today, but the building's architectural style — combining Art Nouveau ornamental detail with National Romantic structural sensibility — points to an architect educated in Northern Europe.
+              Raua 22 was built in the early 1910s, when Raua asum was establishing itself as one of Tallinn's preferred residential addresses. The building was commissioned by a local merchant and industrial family whose ambition was to create a distinguished apartment building to the highest residential standards of the period. The architect remains unidentified today, but the building's architectural style — combining Art Nouveau ornamental detail with National Romantic structural sensibility — points to an architect educated in Northern Europe.
             </p>
           </div>
         </div>
@@ -63,7 +63,7 @@ export default function HistoryPage() {
                   The building was completed around 1912 and opened as a home for the local elite. The original apartments were generous — four to six rooms with high ceilings and large windows that brought abundant light into the south-facing rooms. The entrance was designed with a decorative stairwell whose relief ornamentation reflected German and French design influences.
                 </p>
                 <p className="font-sans font-light text-stone-500 leading-[1.85] text-sm lg:text-base">
-                  In the years following Estonian independence in the 1920s, Kadriorg grew still more prestigious: President Konstantin Päts resided in the area and the district acquired the status of an international diplomatic quarter. Residents of Raua 22 during this period belonged to Tallinn's professional and cultural class.
+                  In the years following Estonian independence in the 1920s, the neighbourhood's proximity to the presidential residence at Kadriorg and the emerging diplomatic quarter nearby lent the area considerable prestige. Residents of Raua 22 during this period belonged to Tallinn's professional and cultural class.
                 </p>
               </div>
             </div>
@@ -106,7 +106,7 @@ export default function HistoryPage() {
                   After the Soviet annexation, the building was nationalised and the apartments were converted into communal dwellings. Rooms were subdivided and the original floor plans were altered. Despite this, the building's structural integrity was preserved thanks to the strength of the original construction — limestone foundations and thick brick walls withstood both physical and aesthetic pressures.
                 </p>
                 <p className="font-sans font-light text-stone-500 leading-[1.85] text-sm lg:text-base">
-                  Despite the general neglect — particularly during the 1970s and 1980s, when many Kadriorg buildings suffered irreversible damage — the facade of Raua 22 remained relatively intact. The limestone pilasters retained their profiles, the window frames held their proportions and the decorative stucco of the stairwell survived.
+                  Despite the general neglect — particularly during the 1970s and 1980s, when many buildings in the area suffered irreversible damage — the facade of Raua 22 remained relatively intact. The limestone pilasters retained their profiles, the window frames held their proportions and the decorative stucco of the stairwell survived.
                 </p>
               </div>
             </div>

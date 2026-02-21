@@ -4,9 +4,9 @@ import Link from "next/link";
 import HeroSection from "@/components/HeroSection";
 
 export const metadata: Metadata = {
-  title: "Ajalugu — Raua 22 | Kadriorg, Tallinn",
+  title: "Ajalugu — Raua 22 | Raua asum, Tallinn",
   description:
-    "Raua 22 hoone ajalugu — muinsuskaitsealune arhitektuuripärand Kadriorus, mis on läbinud põhjaliku restaureerimise, säilitades oma algupärase iseloomu.",
+    "Raua 22 hoone ajalugu — muinsuskaitsealune arhitektuuripärand Raua asumis, mis on läbinud põhjaliku restaureerimise, säilitades oma algupärase iseloomu.",
   openGraph: {
     title: "Ajalugu — Raua 22",
     description:
@@ -20,7 +20,7 @@ export default function AjaluguPage() {
     <>
       <HeroSection
         eyebrow="Ajalugu"
-        title="Üle sajandi on see hoone Kadrioru ellu kirjutatud"
+        title="Üle sajandi on see hoone Raua asumi ellu kirjutatud"
         imageSrc="/images/building-detail.jpeg"
         imageAlt="Raua 22 ajaloolised arhitektuuridetailid"
         overlay="dark"
@@ -38,7 +38,7 @@ export default function AjaluguPage() {
               Hoone, mis on säilinud läbi Tallinna muutliku 20. sajandi — muutumata selle olemuselt.
             </h2>
             <p className="font-sans font-light text-stone-400 leading-[1.85] text-sm lg:text-base">
-              Raua 22 ehitati 1910. aastate alguses, mil Kadriorg kujunes Tallinna esinduslikuks elamupiirkonnaks. Hoone tellija oli kohalik kaupmee- ja tööstusperekond, kelle eesmärk oli luua esinduslik korterelamu piirkonna kõrgeimate elamistandardite järgi. Projekti autor on tänases päevas tuvastamata, kuid hoone arhitektuuriline stiil — ühendades art nouveau detaile ja rahvusromantismi — viitab Põhja-Euroopa haridusega arhitektile.
+              Raua 22 ehitati 1910. aastate alguses, mil Raua asum kujunes üheks Tallinna otsituimaks elamupiirkonnaks. Hoone tellija oli kohalik kaupmee- ja tööstusperekond, kelle eesmärk oli luua esinduslik korterelamu piirkonna kõrgeimate elamistandardite järgi. Projekti autor on tänases päevas tuvastamata, kuid hoone arhitektuuriline stiil — ühendades art nouveau detaile ja rahvusromantismi — viitab Põhja-Euroopa haridusega arhitektile.
             </p>
           </div>
         </div>
@@ -59,7 +59,7 @@ export default function AjaluguPage() {
                   Hoone valmis umbes 1912. aastal ja avati kohaliku eliidi koduks. Algupärased korterid olid mõõdukad — 4–6 toaga, kõrgete lagedega ja suureakendega, mis andsid lõunakülgede ruumidesse külluses päikesevalgust. Sissepääsu ette oli kavandatud dekoratiivne trepikoda, mille reliefkaunistused viitasid saksa ja prantsuse disainimõjudele.
                 </p>
                 <p className="font-sans font-light text-stone-500 leading-[1.85] text-sm lg:text-base">
-                  Eesti Vabariigi iseseisvumisele järgnenud aastatel 1920ndatel muutus Kadriorg veelgi prestiižsemaks: president Konstantini Päts elas piirkonnas ja piirkond sai rahvusvahelise diplomaatilise kvartali staatuse. Raua 22 elanikud kuulusid sel perioodil Tallinna kõrgklassi hulka.
+                  Eesti Vabariigi iseseisvumisele järgnenud aastatel 1920ndatel andis piirkonnale lisaprestiiži lähedus Kadrioru presidendiresidentsile ja kujuneval diplomaatilisele kvartalile. Raua 22 elanikud kuulusid sel perioodil Tallinna haritlaskonna ja äriklassi hulka.
                 </p>
               </div>
             </div>
@@ -100,7 +100,7 @@ export default function AjaluguPage() {
                   Nõukogude anneksiooni järgselt natsionaliseeriti hoone ning korterid jagati kommunaalkorteriteks. Ruumid poolitati ja originaalplaneeringut muudeti. Sellele vaatamata säilis hoone struktuurne terviklikkus tänu tugevale algsele ehitusele — paekivi vundament ja paksud tellismüürid pidasid vastu nii füüsiliselt kui esteetiliselt.
                 </p>
                 <p className="font-sans font-light text-stone-500 leading-[1.85] text-sm lg:text-base">
-                  Hoolimata üldisest hoolitsuse puudumisest — eriti 1970ndatel ja 1980ndatel, mil paljud Kadrioru hooned kannatasid pöördumatu halastamatuse all — jäi Raua 22 fassaad suhteliselt terveks. Paekivisammastel säilisid oma profiilid, aknaraamid hoidsid proportsioonid ja trepikoja dekoratiivstukkki.
+                  Hoolimata üldisest hoolitsuse puudumisest — eriti 1970ndatel ja 1980ndatel, mil paljud piirkonna hooned kannatasid pöördumatu kahjustuse all — jäi Raua 22 fassaad suhteliselt terveks. Paekivisammastel säilisid oma profiilid, aknaraamid hoidsid proportsioonid ja trepikoja dekoratiivstukk püsis.
                 </p>
               </div>
             </div>

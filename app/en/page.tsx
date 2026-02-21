@@ -5,20 +5,20 @@ import HeroSection from "@/components/HeroSection";
 import { jsonLdProperty, jsonLdOrganization } from "@/lib/metadata";
 
 export const metadata: Metadata = {
-  title: "Raua 22 | Kadriorg, Tallinn",
+  title: "Raua 22 | Raua asum, Tallinn",
   description:
-    "Five exclusive residences in a protected heritage building at the heart of Kadriorg. Architectural legacy, restored to contemporary standards of living.",
+    "Five exclusive residences in a protected heritage building in Raua asum, Tallinn. Architectural legacy, restored to contemporary standards of living.",
   keywords: [
-    "Kadriorg apartments",
+    "Raua asum apartments",
     "heritage building Tallinn",
     "exclusive real estate Estonia",
     "listed building apartment Tallinn",
-    "Kadriorg investment property",
+    "Raua asum investment property",
   ],
   openGraph: {
-    title: "Raua 22 — Kadriorg, Tallinn",
+    title: "Raua 22 — Raua asum, Tallinn",
     description:
-      "Five exclusive residences in a protected heritage building at the heart of Kadriorg.",
+      "Five exclusive residences in a protected heritage building in Raua asum, Tallinn.",
     locale: "en_GB",
   },
 };
@@ -35,13 +35,13 @@ export default function EnHomePage() {
 
       {/* Hero */}
       <HeroSection
-        eyebrow="Kadriorg · Tallinn"
+        eyebrow="Raua asum · Tallinn"
         title="A home that is more than a place to live"
         subtitle="Five exclusive residences in a protected heritage building. Architectural legacy, restored for contemporary life."
         ctaLabel="Discover the building"
         ctaHref="/en/overview"
         imageSrc="/images/building-exterior.jpeg"
-        imageAlt="Raua 22 building exterior — Kadriorg, Tallinn"
+        imageAlt="Raua 22 building exterior — Raua asum, Tallinn"
         overlay="dark"
         height="full"
         align="center"
@@ -56,7 +56,7 @@ export default function EnHomePage() {
               className="font-serif font-light text-stone-100 leading-[1.15] mb-8"
               style={{ fontSize: "clamp(1.75rem, 3vw, 2.75rem)" }}
             >
-              Kadriorg is Tallinn's most distinguished residential quarter. Raua 22 is its embodiment — a building that speaks of history, yet is made for the future.
+              Raua asum is one of Tallinn's most quietly distinguished residential quarters. Raua 22 is its embodiment — a building that speaks of history, yet is made for the future.
             </h2>
             <p
               className="font-sans font-light text-stone-400 leading-[1.85]"
@@ -81,8 +81,8 @@ export default function EnHomePage() {
               },
               {
                 num: "02",
-                title: "Kadriorg",
-                body: "A home in one of Tallinn's most prestigious neighbourhoods — within walking distance of Kadriorg Park and the city centre.",
+                title: "Raua asum",
+                body: "A home in one of Tallinn's most established residential quarters — within walking distance of Kadriorg Park and the city centre.",
               },
               {
                 num: "03",
@@ -128,7 +128,7 @@ export default function EnHomePage() {
               </h2>
               <div className="space-y-5 mb-10">
                 <p className="font-sans font-light text-stone-500 leading-[1.85] text-sm lg:text-base">
-                  Raua 22 dates from the early twentieth century, when Kadriorg established itself as Tallinn's premier residential quarter. The original architecture has been carefully preserved — ornamental details, high ceilings, generous window proportions and timber elements have been restored using period-appropriate materials and techniques.
+                  Raua 22 dates from the early twentieth century, when Raua asum established itself as one of Tallinn's preferred residential addresses. The original architecture has been carefully preserved — ornamental details, high ceilings, generous window proportions and timber elements have been restored using period-appropriate materials and techniques.
                 </p>
                 <p className="font-sans font-light text-stone-500 leading-[1.85] text-sm lg:text-base">
                   At the same time, each apartment has become a contemporary home, without compromise on modern comfort. Kitchen appliances, heating systems, electrical installations and acoustic insulation all meet the standards of new construction.
@@ -185,7 +185,7 @@ export default function EnHomePage() {
       <section className="relative py-40 overflow-hidden">
         <Image
           src="/images/kadriorg-view.png"
-          alt="Kadriorg park view"
+          alt="Raua asum neighbourhood view"
           fill
           className="object-cover object-center"
           sizes="100vw"

@@ -26,7 +26,7 @@ export function buildMetadata(page: PageMeta): Metadata {
           url: "/images/building-exterior.jpeg",
           width: 1200,
           height: 630,
-          alt: "Raua 22 — Kadriorg, Tallinn",
+          alt: "Raua 22 — Raua asum, Tallinn",
         },
       ],
     },
@@ -52,9 +52,9 @@ export const jsonLdOrganization = {
 export const jsonLdProperty = {
   "@context": "https://schema.org",
   "@type": "Residence",
-  name: "Raua 22 — Kadriorg Korterid",
+  name: "Raua 22 — Raua asum Korterid",
   description:
-    "Viis erakordset korterit ajaloolises muinsuskaitsealuses hoones Kadrioru südames, Tallinnas.",
+    "Viis erakordset korterit ajaloolises muinsuskaitsealuses hoones Raua asumis, Tallinnas.",
   url: "https://raua22.ee",
   address: {
     "@type": "PostalAddress",

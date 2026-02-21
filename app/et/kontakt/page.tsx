@@ -3,9 +3,9 @@ import ContactForm from "@/components/ContactForm";
 import HeroSection from "@/components/HeroSection";
 
 export const metadata: Metadata = {
-  title: "Kontakt — Raua 22 | Kadriorg, Tallinn",
+  title: "Kontakt — Raua 22 | Raua asum, Tallinn",
   description:
-    "Võtke ühendust Raua 22 meeskonnaga. Korraldame privaatse tutvumiskäigu Kadrioru eksklusiivses kortermajas.",
+    "Võtke ühendust Raua 22 meeskonnaga. Korraldame privaatse tutvumiskäigu Raua asumi eksklusiivses kortermajas.",
   openGraph: {
     title: "Kontakt — Raua 22",
     description: "Korraldame privaatse tutvumiskäigu teile sobival ajal.",

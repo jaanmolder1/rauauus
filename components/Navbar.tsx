@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useState, useEffect } from "react";
 
@@ -58,17 +59,17 @@ export default function Navbar({ lang }: NavbarProps) {
         {/* Logo */}
         <Link
           href={`/${lang}`}
-          className="flex flex-col leading-none group"
-          aria-label="Raua 22 — Avaleht"
+          className="flex items-center group"
+          aria-label="Raua Residences — Avaleht"
         >
-          <span
-            className="font-serif text-xl font-light tracking-widest text-stone-100 group-hover:text-stone-300 transition-colors duration-300"
-          >
-            Raua 22
-          </span>
-          <span className="label-eyebrow text-stone-400 mt-0.5">
-            Kadriorg
-          </span>
+          <Image
+            src="/images/logo-wordmark.png"
+            alt="Raua Residences"
+            width={1866}
+            height={473}
+            className="h-9 w-auto opacity-90 group-hover:opacity-100 transition-opacity duration-300"
+            priority
+          />
         </Link>
 
         {/* Desktop nav */}

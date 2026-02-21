@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 interface FooterProps {
   lang: "et" | "en";
@@ -51,9 +52,16 @@ export default function Footer({ lang }: FooterProps) {
           <div className="md:col-span-2">
             <Link
               href={`/${lang}`}
-              className="font-serif text-2xl font-light tracking-widest text-stone-100 hover:text-stone-300 transition-colors duration-300 inline-block mb-6"
+              className="inline-block mb-6 opacity-80 hover:opacity-100 transition-opacity duration-300"
+              aria-label="Raua Residences"
             >
-              Raua 22
+              <Image
+                src="/images/logo-wordmark.png"
+                alt="Raua Residences"
+                width={1866}
+                height={473}
+                className="h-10 w-auto"
+              />
             </Link>
             <p className="font-sans text-sm leading-relaxed text-stone-500 max-w-md">
               {c.brand}

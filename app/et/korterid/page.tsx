@@ -4,12 +4,12 @@ import Link from "next/link";
 import HeroSection from "@/components/HeroSection";
 
 export const metadata: Metadata = {
-  title: "Korterid — Raua 22 | Kadriorg, Tallinn",
+  title: "Korterid — Raua 22 | Raua asum, Tallinn",
   description:
-    "Raua 22 viis eksklusiivset korterit Kadriorus — 65 kuni 145 ruutmeetrit, kõrged laed, algupärased põrandad ja kaasaegsed mugavused muinsuskaitsealuses hoones.",
+    "Raua 22 viis eksklusiivset korterit Raua asumis — 65 kuni 145 ruutmeetrit, kõrged laed, algupärased põrandad ja kaasaegsed mugavused muinsuskaitsealuses hoones.",
   openGraph: {
     title: "Korterid — Raua 22",
-    description: "Viis eksklusiivset korterit 65–145 m² Kadrioru muinsuskaitsealuses hoones.",
+    description: "Viis eksklusiivset korterit 65–145 m² Raua asumi muinsuskaitsealuses hoones.",
     locale: "et_EE",
   },
 };
@@ -18,7 +18,7 @@ const apartments = [
   {
     id: "apt-1",
     number: "Korter 1",
-    title: "Hoovikortter — Vaikne ja privaatne",
+    title: "Hoovikorter — Vaikne ja privaatne",
     area: "68 m²",
     floor: "1. korrus",
     rooms: "2 tuba",
@@ -37,12 +37,12 @@ const apartments = [
   {
     id: "apt-2",
     number: "Korter 3",
-    title: "Avar kolmetoaline — Klassikaline Kadriorg",
+    title: "Avar kolmetoaline — Raua asumi vaim",
     area: "112 m²",
     floor: "2. korrus",
     rooms: "3 tuba",
     description:
-      "Teise korruse avar korter pakub klassikalist Kadrioru elukvaliteeti. Lahuslahti elutuba ja söögituba, eraldatud magamistoad, helisummutusega aknad ja kõrglaed, mis rõhutavad hoone ajaloolist väärikust.",
+      "Teise korruse avar korter kehastab Raua asumile omast elukvaliteeti. Lahuslahti elutuba ja söögituba, eraldatud magamistoad, helisummutusega aknad ja kõrglaed, mis rõhutavad hoone ajaloolist väärikust.",
     features: [
       "Kõrged laed (3,3 m)",
       "Lahuslahti elutuba",
@@ -56,18 +56,18 @@ const apartments = [
   {
     id: "apt-3",
     number: "Korter 5",
-    title: "Perekortter — Terrassi ja aiaga",
+    title: "Perekorter — Terrassiga tippkorter",
     area: "138 m²",
     floor: "3. korrus",
     rooms: "4 tuba",
     description:
-      "Suurim korter majas pakub perekonnale ruumi ja privaatsust. Avara terrassiga tippakorter vaadetega Kadrioru puudele, neli eraldiseisvat ruumi, kaks vannituba ja rohelusega privaatne aiaosa — ainulaadne kombinatsioon linnakeskkonnas.",
+      "Suurim korter majas pakub perekonnale ruumi ja privaatsust. Avara terrassiga tippkorter vaadetega piirkonna puiestee roheluse üle, neli eraldiseisvat ruumi ja kaks vannituba — ainulaadne kombinatsioon linnakeskkonnas.",
     features: [
       "Privaatne terrass",
       "Kaks vannituba",
       "Kaminakoht",
       "Säilitatud algupärased detailid",
-      "Vaade Kadriorgu",
+      "Vaade üle roheluse",
       "Parkimine hoovis",
     ],
     imageSrc: "/images/raua22-render.png",
@@ -187,7 +187,7 @@ export default function KorteridPage() {
                     href="/et/kontakt"
                     className="inline-block font-sans text-xs tracking-widest uppercase text-stone-800 border border-stone-800 hover:bg-stone-950 hover:text-stone-100 px-7 py-3.5 transition-all duration-400 self-start"
                   >
-                    Küsi infot selle korrteri kohta
+                    Küsi infot selle korteri kohta
                   </Link>
                 </div>
               </article>
