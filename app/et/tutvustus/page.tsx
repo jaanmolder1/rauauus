@@ -137,7 +137,7 @@ export default function TutvustusPage() {
                 { num: "5", label: "Eksklusiivset korterit" },
                 { num: "89–117", label: "Ruutmeetrit" },
                 { num: "100+", label: "Aastat ajalugu" },
-                { num: "1", label: "Privaatne hooviaedik" },
+                { num: "7", label: "Parkimiskohta hoovis" },
               ].map((stat) => (
                 <div key={stat.label} className="border-l-2 border-bronze pl-5">
                   <p className="font-serif text-4xl font-light text-stone-900 leading-none mb-1">

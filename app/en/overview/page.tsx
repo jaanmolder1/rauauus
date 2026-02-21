@@ -145,7 +145,7 @@ export default function OverviewPage() {
                 { num: "5", label: "Exclusive residences" },
                 { num: "89–117", label: "Square metres" },
                 { num: "100+", label: "Years of history" },
-                { num: "1", label: "Private courtyard" },
+                { num: "7", label: "Parking spaces in courtyard" },
               ].map((stat) => (
                 <div key={stat.label} className="border-l-2 border-bronze pl-5">
                   <p className="font-serif text-4xl font-light text-stone-900 leading-none mb-1">
