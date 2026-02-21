@@ -167,9 +167,9 @@ export default function EtHomePage() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-stone-800/30">
             {[
-              { label: "65 – 90 m²", desc: "Ühe- ja kahetoalised kompaktsed korterid esimesel korrusel" },
-              { label: "95 – 115 m²", desc: "Avarad kolmetoalised korterid kõrgete lagedega" },
-              { label: "120 – 145 m²", desc: "Perekortrid suure köögiga ja privaatse terrassiga" },
+              { label: "89 – 99 m²", desc: "Kolmetoalised korterid kahe rõdu või kabinetiga esimesel ja teisel korrusel" },
+              { label: "100 – 113 m²", desc: "Avarad kolme- ja neljatoalised korterid rõdu ja kõrgete laedega" },
+              { label: "117 m²", desc: "Eksklusiivne penthouse privaatse terrassi ja panoraamvaadetega" },
             ].map((apt, i) => (
               <div key={i} className="bg-stone-900/50 p-10 border-t border-stone-800/50">
                 <p className="font-serif text-3xl font-light text-stone-100 mb-3">{apt.label}</p>

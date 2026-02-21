@@ -4,12 +4,12 @@ import Link from "next/link";
 import HeroSection from "@/components/HeroSection";
 
 export const metadata: Metadata = {
-  title: "Apartments — Raua 22 | Raua asum, Tallinn",
+  title: "Apartments — Raua 22 | Raua area, Tallinn",
   description:
-    "Five exclusive apartments at Raua 22, Raua asum — from 89 to 117 square metres, with high ceilings, restored original floors and modern comfort in a listed heritage building.",
+    "Five exclusive apartments at Raua 22, Raua area — from 89 to 117 square metres, with high ceilings, restored original floors and modern comfort in a listed heritage building.",
   openGraph: {
     title: "Apartments — Raua 22",
-    description: "Five exclusive residences from 89–117 m² in Raua asum's listed heritage building.",
+    description: "Five exclusive residences from 89–117 m² in Raua area's listed heritage building.",
     locale: "en_GB",
   },
 };

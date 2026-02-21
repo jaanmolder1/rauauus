@@ -4,13 +4,13 @@ import Link from "next/link";
 import HeroSection from "@/components/HeroSection";
 
 export const metadata: Metadata = {
-  title: "Overview — Raua 22 | Raua asum, Tallinn",
+  title: "Overview — Raua 22 | Raua area, Tallinn",
   description:
-    "An introduction to Raua 22 — a protected heritage building in Raua asum, Tallinn. Five exceptional residences where history and contemporary comfort meet.",
+    "An introduction to Raua 22 — a protected heritage building in Raua area, Tallinn. Five exceptional residences where history and contemporary comfort meet.",
   openGraph: {
     title: "Overview — Raua 22",
     description:
-      "A protected heritage building in Raua asum, Tallinn. Five exceptional residences.",
+      "A protected heritage building in Raua area, Tallinn. Five exceptional residences.",
     locale: "en_GB",
   },
 };
@@ -20,7 +20,7 @@ export default function OverviewPage() {
     <>
       <HeroSection
         eyebrow="Overview"
-        title="Raua asum. History. Made to live in."
+        title="Raua area. History. Made to live in."
         subtitle="Raua 22 is more than a building — it is an experience that begins the moment you step through the door."
         imageSrc="/images/building-exterior.jpeg"
         imageAlt="Raua 22 building facade"
@@ -41,7 +41,7 @@ export default function OverviewPage() {
               Not every building outlives its era. Raua 22 has done so — and will continue to.
             </h2>
             <p className="font-sans font-light text-stone-400 leading-[1.85] text-sm lg:text-base">
-              A listed building in Raua asum's established residential quarter is a testament to enduring value. Architectural character, locational prestige and careful restoration combine to create a living environment that does not age.
+              A listed building in Raua area's established residential quarter is a testament to enduring value. Architectural character, locational prestige and careful restoration combine to create a living environment that does not age.
             </p>
           </div>
         </div>
@@ -57,11 +57,11 @@ export default function OverviewPage() {
                 className="font-serif font-light text-stone-900 leading-tight mb-7"
                 style={{ fontSize: "clamp(2rem, 3vw, 2.75rem)" }}
               >
-                Raua asum — an established address at the heart of Tallinn
+                Raua area — an established address at the heart of Tallinn
               </h2>
               <div className="space-y-5 mb-10">
                 <p className="font-sans font-light text-stone-500 leading-[1.85] text-sm lg:text-base">
-                  Raua Street runs through the heart of Raua asum — a well-established residential quarter where early twentieth-century architecture lines tree-shaded streets. The neighbourhood developed alongside Tallinn's urban expansion, and its character has remained largely intact: unhurried, leafy and deliberately removed from the city's pace.
+                  Raua Street runs through the heart of Raua area — a well-established residential quarter where early twentieth-century architecture lines tree-shaded streets. The neighbourhood developed alongside Tallinn's urban expansion, and its character has remained largely intact: unhurried, leafy and deliberately removed from the city's pace.
                 </p>
                 <p className="font-sans font-light text-stone-500 leading-[1.85] text-sm lg:text-base">
                   Kadriorg Park is within walking distance. Tallinn's Old Town and city centre are reachable in 10 to 15 minutes on foot. Public transport stops and main roads are accessible without the daily environment being affected by traffic noise or crowds.
@@ -74,7 +74,7 @@ export default function OverviewPage() {
             <div className="relative aspect-[4/5] overflow-hidden">
               <Image
                 src="/images/kadriorg-view.png"
-                alt="Raua asum and surroundings"
+                alt="Raua area and surroundings"
                 fill
                 className="object-cover object-center"
                 sizes="(max-width: 1024px) 100vw, 50vw"

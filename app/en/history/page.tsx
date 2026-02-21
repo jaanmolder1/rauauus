@@ -4,9 +4,9 @@ import Link from "next/link";
 import HeroSection from "@/components/HeroSection";
 
 export const metadata: Metadata = {
-  title: "History — Raua 22 | Raua asum, Tallinn",
+  title: "History — Raua 22 | Raua area, Tallinn",
   description:
-    "The history of Raua 22 — a listed architectural heritage building in Raua asum, Tallinn, that has undergone comprehensive restoration, preserving its original character for future generations.",
+    "The history of Raua 22 — a listed architectural heritage building in Raua area, Tallinn, that has undergone comprehensive restoration, preserving its original character for future generations.",
   openGraph: {
     title: "History — Raua 22",
     description:
@@ -20,7 +20,7 @@ export default function HistoryPage() {
     <>
       <HeroSection
         eyebrow="History"
-        title="For over a century, this building has been written into Raua asum's life"
+        title="For over a century, this building has been written into Raua area's life"
         imageSrc="/images/building-detail.jpeg"
         imageAlt="Raua 22 historical architectural details"
         overlay="dark"
@@ -40,7 +40,7 @@ export default function HistoryPage() {
               A building that has endured through Tallinn's turbulent twentieth century — unchanged in its essential character.
             </h2>
             <p className="font-sans font-light text-stone-400 leading-[1.85] text-sm lg:text-base">
-              Raua 22 was built in the early 1910s, when Raua asum was establishing itself as one of Tallinn's preferred residential addresses. The building was commissioned by a local merchant and industrial family whose ambition was to create a distinguished apartment building to the highest residential standards of the period. The architect remains unidentified today, but the building's architectural style — combining Art Nouveau ornamental detail with National Romantic structural sensibility — points to an architect educated in Northern Europe.
+              Raua 22 was built in the early 1910s, when Raua area was establishing itself as one of Tallinn's preferred residential addresses. The building was commissioned by a local merchant and industrial family whose ambition was to create a distinguished apartment building to the highest residential standards of the period. The architect remains unidentified today, but the building's architectural style — combining Art Nouveau ornamental detail with National Romantic structural sensibility — points to an architect educated in Northern Europe.
             </p>
           </div>
         </div>

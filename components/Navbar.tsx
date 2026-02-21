@@ -106,7 +106,7 @@ export default function Navbar({ lang }: NavbarProps) {
         <div className="flex items-center gap-6">
           <Link
             href={altPath}
-            className="font-sans text-xs tracking-widest uppercase text-stone-500 hover:text-bronze-light transition-colors duration-300 border border-stone-700 hover:border-bronze-light px-3 py-1.5"
+            className="font-sans text-xs tracking-widest uppercase text-stone-300 hover:text-bronze-light transition-colors duration-300 border border-stone-500 hover:border-bronze-light px-3 py-1.5"
             aria-label={`Switch to ${altLang === "et" ? "Estonian" : "English"}`}
           >
             {altLang.toUpperCase()}

@@ -5,20 +5,20 @@ import HeroSection from "@/components/HeroSection";
 import { jsonLdProperty, jsonLdOrganization } from "@/lib/metadata";
 
 export const metadata: Metadata = {
-  title: "Raua 22 | Raua asum, Tallinn",
+  title: "Raua 22 | Raua area, Tallinn",
   description:
-    "Five exclusive residences in a protected heritage building in Raua asum, Tallinn. Architectural legacy, restored to contemporary standards of living.",
+    "Five exclusive residences in a protected heritage building in Raua area, Tallinn. Architectural legacy, restored to contemporary standards of living.",
   keywords: [
-    "Raua asum apartments",
+    "Raua area apartments",
     "heritage building Tallinn",
     "exclusive real estate Estonia",
     "listed building apartment Tallinn",
-    "Raua asum investment property",
+    "Raua area investment property",
   ],
   openGraph: {
-    title: "Raua 22 — Raua asum, Tallinn",
+    title: "Raua 22 — Raua area, Tallinn",
     description:
-      "Five exclusive residences in a protected heritage building in Raua asum, Tallinn.",
+      "Five exclusive residences in a protected heritage building in Raua area, Tallinn.",
     locale: "en_GB",
   },
 };
@@ -35,13 +35,13 @@ export default function EnHomePage() {
 
       {/* Hero */}
       <HeroSection
-        eyebrow="Raua asum · Tallinn"
+        eyebrow="Raua area · Tallinn"
         title="A home that is more than a place to live"
         subtitle="Five exclusive residences in a protected heritage building. Architectural legacy, restored for contemporary life."
         ctaLabel="Discover the building"
         ctaHref="/en/overview"
         imageSrc="/images/building-exterior.jpeg"
-        imageAlt="Raua 22 building exterior — Raua asum, Tallinn"
+        imageAlt="Raua 22 building exterior — Raua area, Tallinn"
         overlay="dark"
         height="full"
         align="center"
@@ -56,7 +56,7 @@ export default function EnHomePage() {
               className="font-serif font-light text-stone-100 leading-[1.15] mb-8"
               style={{ fontSize: "clamp(1.75rem, 3vw, 2.75rem)" }}
             >
-              Raua asum is one of Tallinn's most quietly distinguished residential quarters. Raua 22 is its embodiment — a building that speaks of history, yet is made for the future.
+              Raua area is one of Tallinn's most quietly distinguished residential quarters. Raua 22 is its embodiment — a building that speaks of history, yet is made for the future.
             </h2>
             <p
               className="font-sans font-light text-stone-400 leading-[1.85]"
@@ -81,7 +81,7 @@ export default function EnHomePage() {
               },
               {
                 num: "02",
-                title: "Raua asum",
+                title: "Raua area",
                 body: "A home in one of Tallinn's most established residential quarters — within walking distance of Kadriorg Park and the city centre.",
               },
               {
@@ -128,7 +128,7 @@ export default function EnHomePage() {
               </h2>
               <div className="space-y-5 mb-10">
                 <p className="font-sans font-light text-stone-500 leading-[1.85] text-sm lg:text-base">
-                  Raua 22 dates from the early twentieth century, when Raua asum established itself as one of Tallinn's preferred residential addresses. The original architecture has been carefully preserved — ornamental details, high ceilings, generous window proportions and timber elements have been restored using period-appropriate materials and techniques.
+                  Raua 22 dates from the early twentieth century, when Raua area established itself as one of Tallinn's preferred residential addresses. The original architecture has been carefully preserved — ornamental details, high ceilings, generous window proportions and timber elements have been restored using period-appropriate materials and techniques.
                 </p>
                 <p className="font-sans font-light text-stone-500 leading-[1.85] text-sm lg:text-base">
                   At the same time, each apartment has become a contemporary home, without compromise on modern comfort. Kitchen appliances, heating systems, electrical installations and acoustic insulation all meet the standards of new construction.
@@ -168,9 +168,9 @@ export default function EnHomePage() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-stone-800/30">
             {[
-              { label: "65 – 90 m²", desc: "One and two-bedroom compact residences on the first floor" },
-              { label: "95 – 115 m²", desc: "Generous three-room apartments with high ceilings" },
-              { label: "120 – 145 m²", desc: "Family residences with large kitchen and private terrace" },
+              { label: "89 – 99 m²", desc: "Three-room apartments with dual balconies or a study on the ground and second floor" },
+              { label: "100 – 113 m²", desc: "Generous three and four-room apartments with balcony and high ceilings" },
+              { label: "117 m²", desc: "Exclusive penthouse with private terrace and panoramic views" },
             ].map((apt, i) => (
               <div key={i} className="bg-stone-900/50 p-10 border-t border-stone-800/50">
                 <p className="font-serif text-3xl font-light text-stone-100 mb-3">{apt.label}</p>
@@ -185,7 +185,7 @@ export default function EnHomePage() {
       <section className="relative py-40 overflow-hidden">
         <Image
           src="/images/kadriorg-view.png"
-          alt="Raua asum neighbourhood view"
+          alt="Raua area neighbourhood view"
           fill
           className="object-cover object-center"
           sizes="100vw"
