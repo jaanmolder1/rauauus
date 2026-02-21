@@ -36,10 +36,10 @@ export default function TutvustusPage() {
             <p className="label-eyebrow text-stone-500 mb-8">Mis teeb Raua 22 eriliseks</p>
             <h2 className="font-serif font-light text-stone-100 leading-[1.15] mb-8"
               style={{ fontSize: "clamp(1.75rem, 3vw, 2.75rem)" }}>
-              Mitte iga hoone ei ela oma ajastu kauem üle. Raua 22 on seda teinud — ja teeb seda ka edaspidi.
+              Mitte iga hoone ei kesta oma ajastust kauem. Raua 22 on seda teinud — ja teeb seda ka tulevikus.
             </h2>
             <p className="font-sans font-light text-stone-400 leading-[1.85] text-sm lg:text-base">
-              Muinsuskaitsealune hoone Raua asumi väljakujunenud elamukvartalis on tunnistus püsivast väärtusest. Arhitektuurne iseloom, asukoha prestiiž ja hoolikas rekonstrueerimine loovad kokku elamiskeskkonna, mis ei vanane.
+              Muinsuskaitsealune hoone väljakujunenud Raua asumis on püsiväärtuse selge väljendus. Selle arhitektuurne iseloom, hinnatud asukoht ja läbimõeldud rekonstrueerimine loovad elukeskkonna, mille väärtus ajas ei kahane.
             </p>
           </div>
         </div>
@@ -135,7 +135,7 @@ export default function TutvustusPage() {
             <div className="grid grid-cols-2 gap-6 mb-12">
               {[
                 { num: "5", label: "Eksklusiivset korterit" },
-                { num: "65–145", label: "Ruutmeetrit" },
+                { num: "89–117", label: "Ruutmeetrit" },
                 { num: "100+", label: "Aastat ajalugu" },
                 { num: "1", label: "Privaatne hooviaedik" },
               ].map((stat) => (

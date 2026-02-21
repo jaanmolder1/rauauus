@@ -143,7 +143,7 @@ export default function OverviewPage() {
             <div className="grid grid-cols-2 gap-6 mb-12">
               {[
                 { num: "5", label: "Exclusive residences" },
-                { num: "65–145", label: "Square metres" },
+                { num: "89–117", label: "Square metres" },
                 { num: "100+", label: "Years of history" },
                 { num: "1", label: "Private courtyard" },
               ].map((stat) => (
