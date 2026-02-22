@@ -20,7 +20,7 @@ export default function HistoryPage() {
     <>
       <HeroSection
         eyebrow="History"
-        title="For over a century, this building has been written into Raua area's life"
+        title="A defining part of the neighbourhood for over a century."
         imageSrc="/images/building-detail.jpeg"
         imageAlt="Raua 22 historical architectural details"
         overlay="dark"

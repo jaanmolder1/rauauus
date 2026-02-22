@@ -107,7 +107,7 @@ export default function TutvustusPage() {
                   Hoone on varustatud tänapäevaste tehnosüsteemidega: uuendatud elektri- ja torustiku infrastruktuur, kaasaegne küttesüsteem, soojustatud aknad, mis säilitavad algupärase profiili, ning nõuetekohane ventilatsiooni lahendus.
                 </p>
                 <p className="font-sans font-light text-stone-500 leading-[1.85] text-sm lg:text-base">
-                  Hoonesse sisenemine on turvatud. Sissepääs toimub eraldi koodiga kaetud ukse kaudu, hoovialale ligipääs on piiratud. Privaatsus on tagatud nii hoone sees kui väljas.
+                  Hoonesse sisenemine on turvatud. Sissepääs toimub eraldi koodiga ukse kaudu, hoovialale ligipääs on piiratud. Privaatsus on tagatud nii hoone sees kui väljas.
                 </p>
               </div>
             </div>

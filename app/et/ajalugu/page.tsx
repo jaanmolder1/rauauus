@@ -20,7 +20,7 @@ export default function AjaluguPage() {
     <>
       <HeroSection
         eyebrow="Ajalugu"
-        title="Üle sajandi on see hoone Raua asumi ellu kirjutatud"
+        title="Üle sajandi on see hoone Raua asumi ellu kirjutatud."
         imageSrc="/images/building-detail.jpeg"
         imageAlt="Raua 22 ajaloolised arhitektuuridetailid"
         overlay="dark"
