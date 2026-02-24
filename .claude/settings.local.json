@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:endover.ee)",
+      "Bash(npx create-next-app@latest:*)"
+    ]
+  }
+}
