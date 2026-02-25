@@ -13,6 +13,7 @@ const content = {
       { label: "Tutvustus", href: "/et/tutvustus" },
       { label: "Ajalugu", href: "/et/ajalugu" },
       { label: "Korterid", href: "/et/korterid" },
+      { label: "Hinnad ja plaanid", href: "/et/plaanid" },
       { label: "Kontakt", href: "/et/kontakt" },
     ],
     contact: "info@raua22.ee",
@@ -29,6 +30,7 @@ const content = {
       { label: "Overview", href: "/en/overview" },
       { label: "History", href: "/en/history" },
       { label: "Apartments", href: "/en/apartments" },
+      { label: "Prices & Plans", href: "/en/plans" },
       { label: "Contact", href: "/en/contact" },
     ],
     contact: "info@raua22.ee",
@@ -45,7 +47,7 @@ export default function Footer({ lang }: FooterProps) {
 
   return (
     <footer className="bg-stone-950 text-stone-400">
-      <div className="max-w-screen-xl mx-auto px-6 lg:px-12 pt-20 pb-10">
+      <div className="max-w-7xl mx-auto px-6 lg:px-12 pt-20 pb-10">
         {/* Top row */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-16 pb-16 border-b border-stone-800/50">
           {/* Brand */}

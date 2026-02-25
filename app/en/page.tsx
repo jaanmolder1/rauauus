@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
-import HeroSection from "@/components/HeroSection";
 import { jsonLdProperty, jsonLdOrganization } from "@/lib/metadata";
+import MotionBlurHeroClient from "@/components/MotionBlurHeroClient";
+import type { HeroSlide } from "@/components/MotionBlurHero";
+
 
 export const metadata: Metadata = {
   title: "Raua 22 | Raua area, Tallinn",
@@ -23,6 +25,40 @@ export const metadata: Metadata = {
   },
 };
 
+const heroSlides: HeroSlide[] = [
+  {
+    image: "/images/building-render.jpeg",
+    eyebrow: "Raua 22 · Tallinn",
+    title: "An exclusive home in a historic quarter",
+    subtitle: "Five distinct residences. One exceptional building.",
+  },
+  {
+    image: "/images/building-street.jpeg",
+    eyebrow: "Raua 22",
+    title: "History and contemporary life in one building",
+    subtitle: "Listed architectural heritage, restored for modern living.",
+  },
+  {
+    image: "/images/building-courtyard.jpeg",
+    eyebrow: "Raua area",
+    title: "A private living environment",
+    subtitle: "Seven parking spaces in the courtyard. Secure and peaceful.",
+  },
+  {
+    image: "/images/apartment-interior.jpeg",
+    eyebrow: "Apartments",
+    title: "Architectural heritage, restored for contemporary living",
+    subtitle: "Restored details meet contemporary comfort.",
+  },
+  {
+    image: "/images/building-exterior.jpeg",
+    eyebrow: "Raua area · Tallinn",
+    title: "A home that is more than a place to live",
+    subtitle:
+      "Five exclusive residences in a protected heritage building. Architectural legacy, restored for contemporary life.",
+  },
+];
+
 export default function EnHomePage() {
   return (
     <>
@@ -34,22 +70,16 @@ export default function EnHomePage() {
       />
 
       {/* Hero */}
-      <HeroSection
-        eyebrow="Raua area · Tallinn"
-        title="A home that is more than a place to live"
-        subtitle="Five exclusive residences in a protected heritage building. Architectural legacy, restored for contemporary life."
+      <MotionBlurHeroClient
+        slides={heroSlides}
+        autoPlayMs={5000}
         ctaLabel="Discover the building"
         ctaHref="/en/overview"
-        imageSrc="/images/building-exterior.jpeg"
-        imageAlt="Raua 22 building exterior — Raua area, Tallinn"
-        overlay="dark"
-        height="full"
-        align="center"
       />
 
       {/* Intro statement */}
       <section className="bg-stone-950 py-24 md:py-32">
-        <div className="max-w-screen-xl mx-auto px-6 lg:px-12">
+        <div className="max-w-7xl mx-auto px-6 lg:px-12">
           <div className="max-w-3xl">
             <p className="label-eyebrow text-stone-500 mb-8">Raua 22</p>
             <h2
@@ -70,7 +100,7 @@ export default function EnHomePage() {
 
       {/* Feature cards */}
       <section className="bg-stone-50 py-24 md:py-32">
-        <div className="max-w-screen-xl mx-auto px-6 lg:px-12">
+        <div className="max-w-7xl mx-auto px-6 lg:px-12">
           <p className="label-eyebrow mb-12">Why Raua 22</p>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-px bg-stone-200">
             {[
@@ -107,9 +137,9 @@ export default function EnHomePage() {
 
       {/* Image + text split */}
       <section className="bg-white py-24 md:py-32">
-        <div className="max-w-screen-xl mx-auto px-6 lg:px-12">
+        <div className="max-w-7xl mx-auto px-6 lg:px-12">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
-            <div className="relative aspect-[3/4] overflow-hidden">
+            <div className="relative aspect-3/4 overflow-hidden">
               <Image
                 src="/images/building-courtyard.jpeg"
                 alt="Raua 22 courtyard"
@@ -147,7 +177,7 @@ export default function EnHomePage() {
 
       {/* Apartments teaser */}
       <section className="bg-stone-950 py-24 md:py-32">
-        <div className="max-w-screen-xl mx-auto px-6 lg:px-12">
+        <div className="max-w-7xl mx-auto px-6 lg:px-12">
           <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-8 mb-16">
             <div>
               <p className="label-eyebrow text-stone-500 mb-5">Apartments</p>
@@ -191,7 +221,7 @@ export default function EnHomePage() {
           sizes="100vw"
         />
         <div className="absolute inset-0 bg-stone-950/60" />
-        <div className="relative z-10 max-w-screen-xl mx-auto px-6 lg:px-12 text-center">
+        <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-12 text-center">
           <p className="label-eyebrow text-stone-300/80 mb-6">Private viewing</p>
           <h2
             className="font-serif font-light text-stone-50 mb-8"

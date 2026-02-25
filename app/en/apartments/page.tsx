@@ -2,6 +2,11 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import HeroSection from "@/components/HeroSection";
+import { apartmentPriceById } from "@/lib/apartmentData";
+
+function fmtPrice(n: number) {
+  return new Intl.NumberFormat("et-EE", { maximumFractionDigits: 0 }).format(n) + " €";
+}
 
 export const metadata: Metadata = {
   title: "Apartments — Raua 22 | Raua area, Tallinn",
@@ -128,7 +133,7 @@ export default function ApartmentsPage() {
 
       {/* Intro stats */}
       <section className="bg-stone-950 py-20 md:py-28">
-        <div className="max-w-screen-xl mx-auto px-6 lg:px-12">
+        <div className="max-w-7xl mx-auto px-6 lg:px-12">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-stone-800/30">
             {[
               { num: "5", label: "Exclusive residences" },
@@ -146,7 +151,7 @@ export default function ApartmentsPage() {
 
       {/* Apartment listings */}
       <section className="bg-stone-50 py-24 md:py-32">
-        <div className="max-w-screen-xl mx-auto px-6 lg:px-12">
+        <div className="max-w-7xl mx-auto px-6 lg:px-12">
           <p className="label-eyebrow mb-12">Available apartments</p>
           <div className="flex flex-col gap-0">
             {apartments.map((apt, index) => (
@@ -158,7 +163,7 @@ export default function ApartmentsPage() {
               >
                 {/* Image */}
                 <div
-                  className={`relative aspect-[4/3] lg:aspect-auto overflow-hidden ${
+                  className={`relative aspect-4/3 lg:aspect-auto overflow-hidden ${
                     index % 2 === 1 ? "lg:order-last" : ""
                   }`}
                 >
@@ -177,7 +182,7 @@ export default function ApartmentsPage() {
                 {/* Content */}
                 <div className="bg-white p-10 lg:p-14 flex flex-col justify-center">
                   {/* Specs */}
-                  <div className="flex items-center gap-6 mb-7 pb-7 border-b border-stone-100">
+                  <div className="flex items-center gap-6 mb-7 pb-7 border-b border-stone-100 flex-wrap">
                     <div>
                       <p className="label-eyebrow text-stone-400 mb-1">Area</p>
                       <p className="font-serif text-2xl font-light text-stone-900">{apt.area}</p>
@@ -191,6 +196,11 @@ export default function ApartmentsPage() {
                     <div>
                       <p className="label-eyebrow text-stone-400 mb-1">Rooms</p>
                       <p className="font-serif text-2xl font-light text-stone-900">{apt.rooms}</p>
+                    </div>
+                    <div className="h-8 w-px bg-stone-200" />
+                    <div>
+                      <p className="label-eyebrow text-stone-400 mb-1">Price</p>
+                      <p className="font-serif text-2xl font-light text-stone-900">{fmtPrice(apartmentPriceById[apt.id])}</p>
                     </div>
                   </div>
 
@@ -235,7 +245,7 @@ export default function ApartmentsPage() {
 
       {/* Heritage elements section */}
       <section className="bg-white py-24 md:py-32">
-        <div className="max-w-screen-xl mx-auto px-6 lg:px-12">
+        <div className="max-w-7xl mx-auto px-6 lg:px-12">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
             <div>
               <p className="label-eyebrow mb-6">Heritage elements</p>
@@ -262,13 +272,13 @@ export default function ApartmentsPage() {
                   "Contemporary ventilation and heating systems",
                 ].map((item) => (
                   <div key={item} className="flex items-start gap-3">
-                    <span className="mt-1.5 w-1 h-1 rounded-full bg-bronze flex-shrink-0" />
+                    <span className="mt-1.5 w-1 h-1 rounded-full bg-bronze shrink-0" />
                     <p className="font-sans text-sm font-light text-stone-600">{item}</p>
                   </div>
                 ))}
               </div>
             </div>
-            <div className="relative aspect-[3/4] overflow-hidden">
+            <div className="relative aspect-3/4 overflow-hidden">
               <Image
                 src="/images/building-detail.jpeg"
                 alt="Heritage details at Raua 22"
@@ -283,7 +293,7 @@ export default function ApartmentsPage() {
 
       {/* Viewing CTA */}
       <section className="bg-stone-950 py-20 md:py-24">
-        <div className="max-w-screen-xl mx-auto px-6 lg:px-12 flex flex-col md:flex-row items-start md:items-center justify-between gap-8">
+        <div className="max-w-7xl mx-auto px-6 lg:px-12 flex flex-col md:flex-row items-start md:items-center justify-between gap-8">
           <div>
             <p className="label-eyebrow text-stone-500 mb-3">Private viewing</p>
             <h2

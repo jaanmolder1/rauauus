@@ -31,7 +31,7 @@ export default function OverviewPage() {
 
       {/* Positioning statement */}
       <section className="bg-stone-950 py-24 md:py-32">
-        <div className="max-w-screen-xl mx-auto px-6 lg:px-12">
+        <div className="max-w-7xl mx-auto px-6 lg:px-12">
           <div className="max-w-3xl">
             <p className="label-eyebrow text-stone-500 mb-8">What makes Raua 22 different</p>
             <h2
@@ -49,7 +49,7 @@ export default function OverviewPage() {
 
       {/* Section 1 — Location */}
       <section className="bg-white py-24 md:py-32">
-        <div className="max-w-screen-xl mx-auto px-6 lg:px-12">
+        <div className="max-w-7xl mx-auto px-6 lg:px-12">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
             <div>
               <p className="label-eyebrow mb-6">Location</p>
@@ -86,7 +86,7 @@ export default function OverviewPage() {
 
       {/* Section 2 — Building */}
       <section className="bg-stone-50 py-24 md:py-32">
-        <div className="max-w-screen-xl mx-auto px-6 lg:px-12">
+        <div className="max-w-7xl mx-auto px-6 lg:px-12">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
             <div className="relative aspect-[4/5] overflow-hidden lg:order-first order-last">
               <Image
@@ -123,7 +123,7 @@ export default function OverviewPage() {
 
       {/* Section 3 — Living */}
       <section className="bg-white py-24 md:py-32">
-        <div className="max-w-screen-xl mx-auto px-6 lg:px-12">
+        <div className="max-w-7xl mx-auto px-6 lg:px-12">
           <div className="max-w-2xl">
             <p className="label-eyebrow mb-6">Living</p>
             <h2
@@ -169,7 +169,7 @@ export default function OverviewPage() {
 
       {/* CTA stripe */}
       <section className="bg-stone-950 py-20 md:py-24">
-        <div className="max-w-screen-xl mx-auto px-6 lg:px-12 flex flex-col md:flex-row items-start md:items-center justify-between gap-8">
+        <div className="max-w-7xl mx-auto px-6 lg:px-12 flex flex-col md:flex-row items-start md:items-center justify-between gap-8">
           <div>
             <h2
               className="font-serif font-light text-stone-100 mb-2"

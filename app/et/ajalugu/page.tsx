@@ -30,7 +30,7 @@ export default function AjaluguPage() {
 
       {/* Timeline intro */}
       <section className="bg-stone-950 py-24 md:py-32">
-        <div className="max-w-screen-xl mx-auto px-6 lg:px-12">
+        <div className="max-w-7xl mx-auto px-6 lg:px-12">
           <div className="max-w-3xl">
             <p className="label-eyebrow text-stone-500 mb-8">Päritolu</p>
             <h2 className="font-serif font-light text-stone-100 leading-[1.15] mb-8"
@@ -46,7 +46,7 @@ export default function AjaluguPage() {
 
       {/* Era 1 */}
       <section className="bg-white py-24 md:py-32">
-        <div className="max-w-screen-xl mx-auto px-6 lg:px-12">
+        <div className="max-w-7xl mx-auto px-6 lg:px-12">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-start">
             <div>
               <p className="label-eyebrow mb-4">1910 – 1940</p>
@@ -63,7 +63,7 @@ export default function AjaluguPage() {
                 </p>
               </div>
             </div>
-            <div className="relative aspect-[4/3] overflow-hidden mt-8 lg:mt-16">
+            <div className="relative aspect-4/3 overflow-hidden mt-8 lg:mt-16">
               <Image
                 src="/images/building-exterior.jpeg"
                 alt="Raua 22 hoone fassaad"
@@ -78,9 +78,9 @@ export default function AjaluguPage() {
 
       {/* Era 2 */}
       <section className="bg-stone-50 py-24 md:py-32">
-        <div className="max-w-screen-xl mx-auto px-6 lg:px-12">
+        <div className="max-w-7xl mx-auto px-6 lg:px-12">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-start">
-            <div className="relative aspect-[4/3] overflow-hidden">
+            <div className="relative aspect-4/3 overflow-hidden">
               <Image
                 src="/images/building-courtyard.jpeg"
                 alt="Hooviaed"
@@ -110,7 +110,7 @@ export default function AjaluguPage() {
 
       {/* Era 3 — Restaureerimine */}
       <section className="bg-white py-24 md:py-32">
-        <div className="max-w-screen-xl mx-auto px-6 lg:px-12">
+        <div className="max-w-7xl mx-auto px-6 lg:px-12">
           <div className="max-w-3xl">
             <p className="label-eyebrow mb-6">2020 – 2025</p>
             <h2 className="font-serif font-light text-stone-900 leading-tight mb-7"
@@ -157,7 +157,7 @@ export default function AjaluguPage() {
 
       {/* Muinsuskaitse note */}
       <section className="bg-stone-950 py-20 md:py-24">
-        <div className="max-w-screen-xl mx-auto px-6 lg:px-12">
+        <div className="max-w-7xl mx-auto px-6 lg:px-12">
           <div className="max-w-2xl">
             <p className="label-eyebrow text-stone-500 mb-6">Muinsuskaitse</p>
             <p className="font-serif font-light text-stone-300 leading-[1.4] mb-6"

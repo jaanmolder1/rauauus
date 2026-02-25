@@ -38,7 +38,7 @@ export default function ApartmentCard({
   return (
     <article className="group bg-white border border-stone-100 overflow-hidden">
       {/* Image */}
-      <div className="relative aspect-[4/3] overflow-hidden">
+      <div className="relative aspect-4/3 overflow-hidden">
         <Image
           src={imageSrc}
           alt={imageAlt}

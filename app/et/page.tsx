@@ -4,7 +4,7 @@ import Image from "next/image";
 import { jsonLdProperty, jsonLdOrganization } from "@/lib/metadata";
 import MotionBlurHeroClient from "@/components/MotionBlurHeroClient";
 import type { HeroSlide } from "@/components/MotionBlurHero";
-import FinancingSection from "@/components/FinancingSection";
+
 
 export const metadata: Metadata = {
   title: "Raua 22 | Raua asum, Tallinn",
@@ -27,11 +27,22 @@ export const metadata: Metadata = {
 
 const heroSlides: HeroSlide[] = [
   {
-    image: "/images/building-exterior.jpeg",
-    eyebrow: "Raua asum · Tallinn",
-    title: "Kodu, mis on enamat kui elukoht",
-    subtitle:
-      "Viis erakordset korterit muinsuskaitsealuses ajaloolises hoones. Arhitektuurne pärand, uuendatud elamiseks tänapäeval.",
+    image: "/images/building-render.jpeg",
+    eyebrow: "Raua 22 · Tallinn",
+    title: "Eksklusiivne kodu ajaloolises kvartalis",
+    subtitle: "Viis erilist korterit. Üks erakordne hoone.",
+  },
+  {
+    image: "/images/building-street.jpeg",
+    eyebrow: "Raua 22",
+    title: "Ajalugu ja kaasaeg ühes hoones",
+    subtitle: "Muinsuskaitsealune arhitektuur, restaureeritud kaasaegseks eluks.",
+  },
+  {
+    image: "/images/building-courtyard.jpeg",
+    eyebrow: "Raua asum",
+    title: "Privaatne elukeskkond",
+    subtitle: "Seitse parkimiskohta hoovis. Turvaline ja vaikne.",
   },
   {
     image: "/images/apartment-interior.jpeg",
@@ -40,16 +51,11 @@ const heroSlides: HeroSlide[] = [
     subtitle: "Restaureeritud detailid kohtuvad kaasaegse mugavusega.",
   },
   {
-    image: "/images/apartment-living.jpeg",
-    eyebrow: "Elamine",
-    title: "Valgus, ruum ja vaikus",
-    subtitle: "Avarad elutoad, kõrged laed, naturaalsed materjalid.",
-  },
-  {
-    image: "/images/building-courtyard.jpeg",
-    eyebrow: "Raua asum",
-    title: "Privaatne elukeskkond",
-    subtitle: "Seitse parkimiskohta hoovis. Turvaline ja vaikne.",
+    image: "/images/building-exterior.jpeg",
+    eyebrow: "Raua asum · Tallinn",
+    title: "Kodu, mis on enamat kui elukoht",
+    subtitle:
+      "Viis erakordset korterit muinsuskaitsealuses ajaloolises hoones. Arhitektuurne pärand, uuendatud elamiseks tänapäeval.",
   },
 ];
 
@@ -73,7 +79,7 @@ export default function EtHomePage() {
 
       {/* Intro statement */}
       <section className="bg-stone-950 py-24 md:py-32">
-        <div className="max-w-screen-xl mx-auto px-6 lg:px-12">
+        <div className="max-w-7xl mx-auto px-6 lg:px-12">
           <div className="max-w-3xl">
             <p className="label-eyebrow text-stone-500 mb-8">Raua 22</p>
             <h2 className="font-serif font-light text-stone-100 leading-[1.15] mb-8"
@@ -90,7 +96,7 @@ export default function EtHomePage() {
 
       {/* Feature cards */}
       <section className="bg-stone-50 py-24 md:py-32">
-        <div className="max-w-screen-xl mx-auto px-6 lg:px-12">
+        <div className="max-w-7xl mx-auto px-6 lg:px-12">
           <p className="label-eyebrow mb-12">Miks Raua 22</p>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-px bg-stone-200">
             {[
@@ -134,9 +140,9 @@ export default function EtHomePage() {
 
       {/* Image + text split */}
       <section className="bg-white py-24 md:py-32">
-        <div className="max-w-screen-xl mx-auto px-6 lg:px-12">
+        <div className="max-w-7xl mx-auto px-6 lg:px-12">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
-            <div className="relative aspect-[3/4] overflow-hidden">
+            <div className="relative aspect-3/4 overflow-hidden">
               <Image
                 src="/images/building-courtyard.jpeg"
                 alt="Raua 22 hoovialue"
@@ -172,7 +178,7 @@ export default function EtHomePage() {
 
       {/* Apartments teaser */}
       <section className="bg-stone-950 py-24 md:py-32">
-        <div className="max-w-screen-xl mx-auto px-6 lg:px-12">
+        <div className="max-w-7xl mx-auto px-6 lg:px-12">
           <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-8 mb-16">
             <div>
               <p className="label-eyebrow text-stone-500 mb-5">Korterid</p>
@@ -204,9 +210,6 @@ export default function EtHomePage() {
         </div>
       </section>
 
-      {/* Financing section */}
-      <FinancingSection />
-
       {/* Final CTA */}
       <section className="relative py-40 overflow-hidden">
         <Image
@@ -217,7 +220,7 @@ export default function EtHomePage() {
           sizes="100vw"
         />
         <div className="absolute inset-0 bg-stone-950/60" />
-        <div className="relative z-10 max-w-screen-xl mx-auto px-6 lg:px-12 text-center">
+        <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-12 text-center">
           <p className="label-eyebrow text-stone-300/80 mb-6">Privaatne vaatamine</p>
           <h2 className="font-serif font-light text-stone-50 mb-8"
             style={{ fontSize: "clamp(2rem, 4vw, 3.5rem)" }}>

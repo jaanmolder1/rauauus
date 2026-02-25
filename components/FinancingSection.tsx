@@ -210,8 +210,8 @@ export default function FinancingSection({ lang = "et" }: Props) {
   const totalInterest = totalPaid - principal;
 
   return (
-    <section className="bg-white py-24 md:py-32">
-      <div className="max-w-screen-xl mx-auto px-6 lg:px-12">
+    <section className="bg-white pt-12 pb-24 md:pt-14 md:pb-32">
+      <div className="max-w-7xl mx-auto px-6 lg:px-12">
 
         {/* Header */}
         <div className="max-w-2xl mb-20">
@@ -257,7 +257,7 @@ export default function FinancingSection({ lang = "et" }: Props) {
                 <div className="flex flex-col gap-2">
                   {combo.segments.map((seg) => (
                     <div key={seg.label} className="flex items-center gap-2.5">
-                      <div className="w-2.5 h-2.5 rounded-sm flex-shrink-0" style={{ backgroundColor: seg.color }} />
+                      <div className="w-2.5 h-2.5 rounded-sm shrink-0" style={{ backgroundColor: seg.color }} />
                       <span className="font-sans text-xs text-stone-500">{seg.label}</span>
                       <span className="font-sans text-xs text-stone-400 ml-auto">{seg.pct}%</span>
                     </div>
@@ -382,7 +382,7 @@ export default function FinancingSection({ lang = "et" }: Props) {
           </div>
 
           {/* Output */}
-          <div className="bg-stone-950 p-10 lg:p-12 flex flex-col justify-between min-h-[420px]">
+          <div className="bg-stone-950 p-10 lg:p-12 flex flex-col justify-between min-h-105">
             <div>
               <p className="label-eyebrow text-stone-500 mb-8">{t.outputEyebrow}</p>
               <p

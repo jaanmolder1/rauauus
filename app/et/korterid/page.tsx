@@ -4,10 +4,14 @@ import Link from "next/link";
 import HeroSection from "@/components/HeroSection";
 import { apartments } from "@/lib/apartmentData";
 
+function fmtPrice(n: number) {
+  return new Intl.NumberFormat("et-EE", { maximumFractionDigits: 0 }).format(n) + " €";
+}
+
 export const metadata: Metadata = {
   title: "Korterid — Raua 22 | Raua asum, Tallinn",
   description:
-    "Raua 22 viis eksklusiivset korterit Raua asumis — 89 kuni 117 ruutmeetrit, kõrged laed, algupärased põrandad ja kaasaegsed mugavused muinsuskaitsealuses hoones.",
+    "Viis eksklusiivset korterit Raua 22-s, Raua asumis — 89 kuni 117 ruutmeetrit, kõrged laed, restaureeritud algupärased põrandad ja kaasaegne mugavus muinsuskaitsealuses hoones.",
   openGraph: {
     title: "Korterid — Raua 22",
     description: "Viis eksklusiivset korterit 89–117 m² Raua asumi muinsuskaitsealuses hoones.",
@@ -15,17 +19,13 @@ export const metadata: Metadata = {
   },
 };
 
-function fmtPrice(n: number) {
-  return new Intl.NumberFormat("et-EE", { maximumFractionDigits: 0 }).format(n) + " €";
-}
-
 export default function KorteridPage() {
   return (
     <>
       <HeroSection
         eyebrow="Korterid"
         title="Viis kodu. Iga üks erinev."
-        subtitle="Igal Raua 22 korteril on oma iseloom, oma vaade ja oma lugu. Korterite valik tagab, et igaüks leiab oma elurütmile vastava kodu."
+        subtitle="Igal Raua 22 korteril on oma iseloom, oma vaade ja oma lugu. Valik tagab, et iga ostja leiab endale sobiva kodu."
         imageSrc="/images/apartment-interior.jpeg"
         imageAlt="Raua 22 korterite interjöör"
         overlay="dark"
@@ -33,14 +33,14 @@ export default function KorteridPage() {
         align="left"
       />
 
-      {/* Intro */}
+      {/* Intro stats */}
       <section className="bg-stone-950 py-20 md:py-28">
-        <div className="max-w-screen-xl mx-auto px-6 lg:px-12">
+        <div className="max-w-7xl mx-auto px-6 lg:px-12">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-stone-800/30">
             {[
               { num: "5", label: "Eksklusiivset korterit" },
               { num: "89–117 m²", label: "Pindade vahemik" },
-              { num: "3–4", label: "Tubade valik" },
+              { num: "3–4", label: "Toaline" },
             ].map((stat) => (
               <div key={stat.label} className="bg-stone-900/30 p-10 lg:p-12">
                 <p className="font-serif text-5xl font-light text-stone-100 mb-3">{stat.num}</p>
@@ -53,8 +53,8 @@ export default function KorteridPage() {
 
       {/* Apartment listings */}
       <section className="bg-stone-50 py-24 md:py-32">
-        <div className="max-w-screen-xl mx-auto px-6 lg:px-12">
-          <p className="label-eyebrow mb-12">Saadaval korterid</p>
+        <div className="max-w-7xl mx-auto px-6 lg:px-12">
+          <p className="label-eyebrow mb-12">Saadaolevad korterid</p>
           <div className="flex flex-col gap-0">
             {apartments.map((apt, index) => (
               <article
@@ -65,7 +65,7 @@ export default function KorteridPage() {
               >
                 {/* Image */}
                 <div
-                  className={`relative aspect-[4/3] lg:aspect-auto overflow-hidden ${
+                  className={`relative aspect-4/3 lg:aspect-auto overflow-hidden ${
                     index % 2 === 1 ? "lg:order-last" : ""
                   }`}
                 >
@@ -83,7 +83,7 @@ export default function KorteridPage() {
 
                 {/* Content */}
                 <div className="bg-white p-10 lg:p-14 flex flex-col justify-center">
-                  {/* Specs + Price */}
+                  {/* Specs */}
                   <div className="flex items-center gap-6 mb-7 pb-7 border-b border-stone-100 flex-wrap">
                     <div>
                       <p className="label-eyebrow text-stone-400 mb-1">Pind</p>
@@ -131,13 +131,21 @@ export default function KorteridPage() {
                     ))}
                   </div>
 
-                  {/* CTA */}
-                  <Link
-                    href="/et/kontakt"
-                    className="inline-block font-sans text-xs tracking-widest uppercase text-stone-800 border border-stone-800 hover:bg-stone-950 hover:text-stone-100 px-7 py-3.5 transition-all duration-400 self-start"
-                  >
-                    Küsi infot selle korteri kohta
-                  </Link>
+                  {/* CTAs */}
+                  <div className="flex flex-wrap gap-3">
+                    <Link
+                      href="/et/kontakt"
+                      className="inline-block font-sans text-xs tracking-widest uppercase text-stone-800 border border-stone-800 hover:bg-stone-950 hover:text-stone-100 px-7 py-3.5 transition-all duration-400"
+                    >
+                      Küsi selle korteri kohta
+                    </Link>
+                    <Link
+                      href="/et/plaanid"
+                      className="inline-block font-sans text-xs tracking-widest uppercase text-stone-500 border border-stone-200 hover:border-stone-500 px-7 py-3.5 transition-all duration-300"
+                    >
+                      Vaata korruseplaani
+                    </Link>
+                  </div>
                 </div>
               </article>
             ))}
@@ -145,12 +153,12 @@ export default function KorteridPage() {
         </div>
       </section>
 
-      {/* Heritage elements section */}
+      {/* Heritage section */}
       <section className="bg-white py-24 md:py-32">
-        <div className="max-w-screen-xl mx-auto px-6 lg:px-12">
+        <div className="max-w-7xl mx-auto px-6 lg:px-12">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
             <div>
-              <p className="label-eyebrow mb-6">Ajaloolised elemendid</p>
+              <p className="label-eyebrow mb-6">Muinsuslikud elemendid</p>
               <h2
                 className="font-serif font-light text-stone-900 leading-tight mb-7"
                 style={{ fontSize: "clamp(2rem, 3vw, 2.75rem)" }}
@@ -159,31 +167,33 @@ export default function KorteridPage() {
               </h2>
               <div className="space-y-5 mb-10">
                 <p className="font-sans font-light text-stone-500 leading-[1.85] text-sm lg:text-base">
-                  Kõikides korterites on säilitatud ja restaureeritud ajalooline puitpõrand. Valitud on konserveerimismeetod, mis taastab originaalse tooni ja tekstuuri, kuid pikendab kasutusiga kümnete aastate võrra.
+                  Igas korteris on algupärased puitpõrandad säilitatud ja restaureeritud. Kasutatud on konserveerimismeetodit,
+                  mis taastab algupärase tooni ja tekstuuri, pikendades samal ajal kasutuseiga aastakümnete võrra.
                 </p>
                 <p className="font-sans font-light text-stone-500 leading-[1.85] text-sm lg:text-base">
-                  Kõrged laed (3,0–3,4 m) annavad igale korterile proportsionaalse suuruse. Korterites, kus algupärane stukkliist oli säilinud, on see restaureeritud. Aknaid ei ole asendatud plastikuga — paekivi- ja puitsed raamid hoiavad algset profiili, kuid nende soojustus on kaasajastatud.
+                  Kõrged laed (3,0–3,4 m) annavad igale korterile proportsionaalse ruumitunde. Aknad pole välja vahetatud —
+                  lubjakivi ja puitraamid säilitavad algupärase profiili, kuid nende soojapidavust on kaasajastatud.
                 </p>
               </div>
               <div className="space-y-3">
                 {[
-                  "Restaureeritud puitpõrandad",
+                  "Restaureeritud algupärased puitpõrandad",
                   "Kõrged laed (3,0–3,4 m)",
-                  "Algupärased aknapositsioonid ja -proportsioonid",
-                  "Muinsuskaitse nõuetekohane restaureerimine",
+                  "Algupärased aknaavad ja proportsioonid",
+                  "Restaureerimine vastavalt muinsuskaitsenõuetele",
                   "Kaasaegne ventilatsioon ja küttesüsteem",
                 ].map((item) => (
                   <div key={item} className="flex items-start gap-3">
-                    <span className="mt-1.5 w-1 h-1 rounded-full bg-bronze flex-shrink-0" />
+                    <span className="mt-1.5 w-1 h-1 rounded-full bg-bronze shrink-0" />
                     <p className="font-sans text-sm font-light text-stone-600">{item}</p>
                   </div>
                 ))}
               </div>
             </div>
-            <div className="relative aspect-[3/4] overflow-hidden">
+            <div className="relative aspect-3/4 overflow-hidden">
               <Image
                 src="/images/building-detail.jpeg"
-                alt="Ajaloolised detailid Raua 22-s"
+                alt="Muinsuslikud detailid Raua 22-s"
                 fill
                 className="object-cover object-center"
                 sizes="(max-width: 1024px) 100vw, 50vw"
@@ -195,7 +205,7 @@ export default function KorteridPage() {
 
       {/* Viewing CTA */}
       <section className="bg-stone-950 py-20 md:py-24">
-        <div className="max-w-screen-xl mx-auto px-6 lg:px-12 flex flex-col md:flex-row items-start md:items-center justify-between gap-8">
+        <div className="max-w-7xl mx-auto px-6 lg:px-12 flex flex-col md:flex-row items-start md:items-center justify-between gap-8">
           <div>
             <p className="label-eyebrow text-stone-500 mb-3">Privaatne vaatamine</p>
             <h2

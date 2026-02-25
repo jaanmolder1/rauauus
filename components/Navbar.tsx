@@ -18,6 +18,7 @@ const navItemsEt: NavItem[] = [
   { label: "Tutvustus", href: "/et/tutvustus" },
   { label: "Ajalugu", href: "/et/ajalugu" },
   { label: "Korterid", href: "/et/korterid" },
+  { label: "Hinnad ja plaanid", href: "/et/plaanid" },
   { label: "Kontakt", href: "/et/kontakt" },
 ];
 
@@ -25,6 +26,7 @@ const navItemsEn: NavItem[] = [
   { label: "Overview", href: "/en/overview" },
   { label: "History", href: "/en/history" },
   { label: "Apartments", href: "/en/apartments" },
+  { label: "Prices & Plans", href: "/en/plans" },
   { label: "Contact", href: "/en/contact" },
 ];
 
@@ -37,8 +39,8 @@ export default function Navbar({ lang }: NavbarProps) {
   const altLang = lang === "et" ? "en" : "et";
 
   const slugMap: Record<string, Record<string, string>> = {
-    et: { tutvustus: "overview", ajalugu: "history", korterid: "apartments", kontakt: "contact" },
-    en: { overview: "tutvustus", history: "ajalugu", apartments: "korterid", contact: "kontakt" },
+    et: { tutvustus: "overview", ajalugu: "history", korterid: "apartments", plaanid: "plans", kontakt: "contact" },
+    en: { overview: "tutvustus", history: "ajalugu", apartments: "korterid", plans: "plaanid", contact: "kontakt" },
   };
 
   const slug = pathname.split("/").filter(Boolean)[1];
@@ -63,14 +65,14 @@ export default function Navbar({ lang }: NavbarProps) {
           : "bg-stone-950/40 backdrop-blur-sm py-7"
       }`}
     >
-      <nav className="max-w-screen-xl mx-auto px-6 lg:px-12 flex items-center justify-between">
+      <nav className="max-w-7xl mx-auto px-6 lg:px-12 flex items-center justify-between">
         {/* Logo */}
         <Link
           href={`/${lang}`}
           className="flex items-center group"
           aria-label="Raua Residences — Avaleht"
         >
-          <Logo className="h-11 w-auto opacity-90 group-hover:opacity-100 transition-opacity duration-300" />
+          <Logo className="h-14 w-auto opacity-90 group-hover:opacity-100 transition-opacity duration-300" />
         </Link>
 
         {/* Desktop nav */}

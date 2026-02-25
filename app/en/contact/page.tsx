@@ -29,7 +29,7 @@ export default function ContactPage() {
 
       {/* Contact section */}
       <section className="bg-white py-24 md:py-32">
-        <div className="max-w-screen-xl mx-auto px-6 lg:px-12">
+        <div className="max-w-7xl mx-auto px-6 lg:px-12">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-28">
             {/* Left — info */}
             <div>
@@ -102,7 +102,7 @@ export default function ContactPage() {
 
       {/* Distance panel */}
       <section className="bg-stone-950 py-16">
-        <div className="max-w-screen-xl mx-auto px-6 lg:px-12">
+        <div className="max-w-7xl mx-auto px-6 lg:px-12">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-stone-800/30">
             {[
               { label: "Kadriorg Park", value: "5 min", unit: "on foot" },
