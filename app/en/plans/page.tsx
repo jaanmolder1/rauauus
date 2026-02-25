@@ -72,10 +72,10 @@ export default function PlansPage() {
     <>
       <HeroSection
         eyebrow="Prices & Plans"
-        title="Five homes. Each distinct."
-        subtitle="Explore the interactive floor plans and find the residence that suits you best at Raua 22."
-        imageSrc="/images/apartment-interior.jpeg"
-        imageAlt="Raua 22 apartment interior"
+        title="Floor plans and pricing."
+        subtitle="Study the plans, compare sizes and find the right home. Everything you need to make a decision."
+        imageSrc="/images/building-exterior.jpeg"
+        imageAlt="Raua 22 building exterior"
         overlay="dark"
         height="large"
         align="left"

@@ -39,7 +39,7 @@ const heroSlides: HeroSlide[] = [
     subtitle: "Listed architectural heritage, restored for modern living.",
   },
   {
-    image: "/images/building-courtyard.jpeg",
+    image: "/images/building-view.jpeg",
     eyebrow: "Raua area",
     title: "A private living environment",
     subtitle: "Seven parking spaces in the courtyard. Secure and peaceful.",

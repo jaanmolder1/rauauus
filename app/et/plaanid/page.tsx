@@ -25,10 +25,10 @@ export default function PlaanidPage() {
     <>
       <HeroSection
         eyebrow="Hinnad ja plaanid"
-        title="Viis kodu. Iga üks erinev."
-        subtitle="Tutvu interaktiivsete korruseplaanidega ja leia endale sobivaim kodu Raua 22-s."
-        imageSrc="/images/apartment-interior.jpeg"
-        imageAlt="Raua 22 korterite interjöör"
+        title="Korruseplaanid ja hinnad."
+        subtitle="Uuri korterite plaane, võrdle pindasid ja leia sobiv kodu. Kõik, mida vajad otsuse tegemiseks."
+        imageSrc="/images/building-exterior.jpeg"
+        imageAlt="Raua 22 hoone välivaade"
         overlay="dark"
         height="large"
         align="left"

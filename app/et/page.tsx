@@ -39,7 +39,7 @@ const heroSlides: HeroSlide[] = [
     subtitle: "Muinsuskaitsealune arhitektuur, restaureeritud kaasaegseks eluks.",
   },
   {
-    image: "/images/building-courtyard.jpeg",
+    image: "/images/building-view.jpeg",
     eyebrow: "Raua asum",
     title: "Privaatne elukeskkond",
     subtitle: "Seitse parkimiskohta hoovis. Turvaline ja vaikne.",
