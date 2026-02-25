@@ -4,6 +4,7 @@ import Image from "next/image";
 import { jsonLdProperty, jsonLdOrganization } from "@/lib/metadata";
 import MotionBlurHeroClient from "@/components/MotionBlurHeroClient";
 import type { HeroSlide } from "@/components/MotionBlurHero";
+import FinancingSection from "@/components/FinancingSection";
 
 export const metadata: Metadata = {
   title: "Raua 22 | Raua asum, Tallinn",
@@ -202,6 +203,9 @@ export default function EtHomePage() {
           </div>
         </div>
       </section>
+
+      {/* Financing section */}
+      <FinancingSection />
 
       {/* Final CTA */}
       <section className="relative py-40 overflow-hidden">
