@@ -132,7 +132,18 @@ General information about Raua 22:
 Be friendly, professional and knowledgeable. Reply in English only. For viewing requests or detailed information, direct enquirers to info@raua22.ee. Keep responses focused on the property and apartment.`;
 }
 
+export async function GET() {
+  const apiKey = process.env.ANTHROPIC_API_KEY;
+  const configured = !!apiKey && apiKey !== "your-anthropic-api-key-here";
+  return NextResponse.json({ configured });
+}
+
 export async function POST(req: NextRequest) {
+  const apiKey = process.env.ANTHROPIC_API_KEY;
+  if (!apiKey || apiKey === "your-anthropic-api-key-here") {
+    return NextResponse.json({ error: "not_configured" }, { status: 503 });
+  }
+
   try {
     const { messages, apartmentId, lang } = await req.json();
 

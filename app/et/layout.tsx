@@ -1,5 +1,6 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import FloatingChat from "@/components/FloatingChat";
 
 export default function EtLayout({
   children,
@@ -11,6 +12,7 @@ export default function EtLayout({
       <Navbar lang="et" />
       <main>{children}</main>
       <Footer lang="et" />
+      <FloatingChat lang="et" />
     </>
   );
 }
