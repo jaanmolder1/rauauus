@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
-import HeroSection from "@/components/HeroSection";
 import { jsonLdProperty, jsonLdOrganization } from "@/lib/metadata";
+import MotionBlurHeroClient from "@/components/MotionBlurHeroClient";
+import type { HeroSlide } from "@/components/MotionBlurHero";
 
 export const metadata: Metadata = {
   title: "Raua 22 | Raua asum, Tallinn",
@@ -23,6 +24,34 @@ export const metadata: Metadata = {
   },
 };
 
+const heroSlides: HeroSlide[] = [
+  {
+    image: "/images/building-exterior.jpeg",
+    eyebrow: "Raua asum · Tallinn",
+    title: "Kodu, mis on enamat kui elukoht",
+    subtitle:
+      "Viis erakordset korterit muinsuskaitsealuses ajaloolises hoones. Arhitektuurne pärand, uuendatud elamiseks tänapäeval.",
+  },
+  {
+    image: "/images/apartment-interior.jpeg",
+    eyebrow: "Korterid",
+    title: "Arhitektuurne pärand, uuendatud elamiseks",
+    subtitle: "Restaureeritud detailid kohtuvad kaasaegse mugavusega.",
+  },
+  {
+    image: "/images/apartment-living.jpeg",
+    eyebrow: "Elamine",
+    title: "Valgus, ruum ja vaikus",
+    subtitle: "Avarad elutoad, kõrged laed, naturaalsed materjalid.",
+  },
+  {
+    image: "/images/building-courtyard.jpeg",
+    eyebrow: "Raua asum",
+    title: "Privaatne elukeskkond",
+    subtitle: "Seitse parkimiskohta hoovis. Turvaline ja vaikne.",
+  },
+];
+
 export default function EtHomePage() {
   return (
     <>
@@ -34,17 +63,11 @@ export default function EtHomePage() {
       />
 
       {/* Hero */}
-      <HeroSection
-        eyebrow="Raua asum · Tallinn"
-        title="Kodu, mis on enamat kui elukoht"
-        subtitle="Viis erakordset korterit muinsuskaitsealuses ajaloolises hoones. Arhitektuurne pärand, uuendatud elamiseks tänapäeval."
-        ctaLabel="Tutvu kortermajaga"
+      <MotionBlurHeroClient
+        slides={heroSlides}
+        autoPlayMs={5000}
+        ctaLabel="Tutvu korteritega"
         ctaHref="/et/tutvustus"
-        imageSrc="/images/building-exterior.jpeg"
-        imageAlt="Raua 22 hoone välisilme — Raua asum, Tallinn"
-        overlay="dark"
-        height="full"
-        align="center"
       />
 
       {/* Intro statement */}

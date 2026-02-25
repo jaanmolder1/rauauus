@@ -1,5 +1,5 @@
 import Link from "next/link";
-import Image from "next/image";
+import Logo from "./Logo";
 
 interface FooterProps {
   lang: "et" | "en";
@@ -55,13 +55,7 @@ export default function Footer({ lang }: FooterProps) {
               className="inline-block mb-6 opacity-80 hover:opacity-100 transition-opacity duration-300"
               aria-label="Raua Residences"
             >
-              <Image
-                src="/images/logo-wordmark.png"
-                alt="Raua Residences"
-                width={1866}
-                height={473}
-                className="h-10 w-auto"
-              />
+              <Logo className="h-10 w-auto" color="#9c8670" />
             </Link>
             <p className="font-sans text-sm leading-relaxed text-stone-500 max-w-md">
               {c.brand}

@@ -1,9 +1,9 @@
 "use client";
 
 import Link from "next/link";
-import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useState, useEffect } from "react";
+import Logo from "./Logo";
 
 interface NavItem {
   label: string;
@@ -60,7 +60,7 @@ export default function Navbar({ lang }: NavbarProps) {
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-600 ${
         scrolled
           ? "bg-stone-950/95 backdrop-blur-md border-b border-stone-800/30 py-4"
-          : "bg-transparent py-7"
+          : "bg-stone-950/40 backdrop-blur-sm py-7"
       }`}
     >
       <nav className="max-w-screen-xl mx-auto px-6 lg:px-12 flex items-center justify-between">
@@ -70,14 +70,7 @@ export default function Navbar({ lang }: NavbarProps) {
           className="flex items-center group"
           aria-label="Raua Residences — Avaleht"
         >
-          <Image
-            src="/images/logo-wordmark.png"
-            alt="Raua Residences"
-            width={1866}
-            height={473}
-            className="h-9 w-auto opacity-90 group-hover:opacity-100 transition-opacity duration-300"
-            priority
-          />
+          <Logo className="h-11 w-auto opacity-90 group-hover:opacity-100 transition-opacity duration-300" />
         </Link>
 
         {/* Desktop nav */}
