@@ -2,11 +2,8 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import HeroSection from "@/components/HeroSection";
-import { apartmentPriceById } from "@/lib/apartmentData";
-
-function fmtPrice(n: number) {
-  return new Intl.NumberFormat("et-EE", { maximumFractionDigits: 0 }).format(n) + " €";
-}
+import ApartmentListSection from "@/components/ApartmentListSection";
+import type { ApartmentInfo } from "@/lib/apartmentData";
 
 export const metadata: Metadata = {
   title: "Apartments — Raua 22 | Raua area, Tallinn",
@@ -19,7 +16,7 @@ export const metadata: Metadata = {
   },
 };
 
-const apartments = [
+const apartments: ApartmentInfo[] = [
   {
     id: "apt-1",
     number: "Apartment 1",
@@ -27,6 +24,7 @@ const apartments = [
     area: "113 m²",
     floor: "Ground floor",
     rooms: "4 rooms",
+    price: 475_000,
     description:
       "The largest ground-floor apartment opens onto the private courtyard. Three independent bedrooms, a generous kitchen-living room (35.7 m²) and two walk-in wardrobes provide space for every daily need. Restored timber floors and high ceilings preserve the building's original dignity.",
     features: [
@@ -46,6 +44,7 @@ const apartments = [
     area: "99 m²",
     floor: "Ground floor",
     rooms: "3 rooms + study",
+    price: 415_000,
     description:
       "A compact and well-considered ground-floor apartment with a separate study for working from home. Two bedrooms, a generous kitchen-living room (32.1 m²) and a walk-in wardrobe form a coherent whole within an original listed setting.",
     features: [
@@ -65,6 +64,7 @@ const apartments = [
     area: "100 m²",
     floor: "Second floor",
     rooms: "3 rooms",
+    price: 445_000,
     description:
       "A second-floor apartment with a 23 m² balcony — a rare outdoor space in the heart of the city. Two bedrooms, a generous kitchen-living room (34.3 m²) and two walk-in wardrobes are arranged with ease. High ceilings and the ornamental period stairwell underscore the building's character.",
     features: [
@@ -84,6 +84,7 @@ const apartments = [
     area: "89 m²",
     floor: "Second floor",
     rooms: "3 rooms",
+    price: 380_000,
     description:
       "Two balconies (19.5 m² and 12.9 m², over 32 m² in total) give this second-floor apartment exceptional light and outdoor living. Two bedrooms and a generous kitchen-living room (33.4 m²) are thoughtfully arranged. Courtyard parking adds everyday convenience.",
     features: [
@@ -103,6 +104,7 @@ const apartments = [
     area: "117 m²",
     floor: "Third floor",
     rooms: "4 rooms",
+    price: 595_000,
     description:
       "The largest apartment in the building offers a family both space and privacy. A generous terrace (29.7 m²) with views over the neighbourhood's tree canopy, three independent bedrooms, two bathrooms and a kitchen-living room (38.1 m²) — an unusual combination in an urban setting.",
     features: [
@@ -149,99 +151,7 @@ export default function ApartmentsPage() {
         </div>
       </section>
 
-      {/* Apartment listings */}
-      <section className="bg-stone-50 py-24 md:py-32">
-        <div className="max-w-7xl mx-auto px-6 lg:px-12">
-          <p className="label-eyebrow mb-12">Available apartments</p>
-          <div className="flex flex-col gap-0">
-            {apartments.map((apt, index) => (
-              <article
-                key={apt.id}
-                className={`grid grid-cols-1 lg:grid-cols-2 gap-0 border border-stone-200 ${
-                  index > 0 ? "border-t-0" : ""
-                }`}
-              >
-                {/* Image */}
-                <div
-                  className={`relative aspect-4/3 lg:aspect-auto overflow-hidden ${
-                    index % 2 === 1 ? "lg:order-last" : ""
-                  }`}
-                >
-                  <Image
-                    src={apt.imageSrc}
-                    alt={apt.imageAlt}
-                    fill
-                    className="object-cover object-center"
-                    sizes="(max-width: 1024px) 100vw, 50vw"
-                  />
-                  <div className="absolute top-5 left-5 bg-stone-950/80 backdrop-blur-sm px-3 py-1.5">
-                    <span className="label-eyebrow text-stone-300">{apt.number}</span>
-                  </div>
-                </div>
-
-                {/* Content */}
-                <div className="bg-white p-10 lg:p-14 flex flex-col justify-center">
-                  {/* Specs */}
-                  <div className="flex items-center gap-6 mb-7 pb-7 border-b border-stone-100 flex-wrap">
-                    <div>
-                      <p className="label-eyebrow text-stone-400 mb-1">Area</p>
-                      <p className="font-serif text-2xl font-light text-stone-900">{apt.area}</p>
-                    </div>
-                    <div className="h-8 w-px bg-stone-200" />
-                    <div>
-                      <p className="label-eyebrow text-stone-400 mb-1">Floor</p>
-                      <p className="font-serif text-2xl font-light text-stone-900">{apt.floor}</p>
-                    </div>
-                    <div className="h-8 w-px bg-stone-200" />
-                    <div>
-                      <p className="label-eyebrow text-stone-400 mb-1">Rooms</p>
-                      <p className="font-serif text-2xl font-light text-stone-900">{apt.rooms}</p>
-                    </div>
-                    <div className="h-8 w-px bg-stone-200" />
-                    <div>
-                      <p className="label-eyebrow text-stone-400 mb-1">Price</p>
-                      <p className="font-serif text-2xl font-light text-stone-900">{fmtPrice(apartmentPriceById[apt.id])}</p>
-                    </div>
-                  </div>
-
-                  {/* Title */}
-                  <h2
-                    className="font-serif font-light text-stone-900 leading-snug mb-5"
-                    style={{ fontSize: "clamp(1.5rem, 2.5vw, 2rem)" }}
-                  >
-                    {apt.title}
-                  </h2>
-
-                  {/* Description */}
-                  <p className="font-sans font-light text-stone-500 leading-relaxed text-sm lg:text-base mb-8">
-                    {apt.description}
-                  </p>
-
-                  {/* Features */}
-                  <div className="flex flex-wrap gap-2 mb-10">
-                    {apt.features.map((feature) => (
-                      <span
-                        key={feature}
-                        className="font-sans text-xs tracking-wide text-stone-600 bg-stone-50 border border-stone-100 px-3 py-1"
-                      >
-                        {feature}
-                      </span>
-                    ))}
-                  </div>
-
-                  {/* CTA */}
-                  <Link
-                    href="/en/contact"
-                    className="inline-block font-sans text-xs tracking-widest uppercase text-stone-800 border border-stone-800 hover:bg-stone-950 hover:text-stone-100 px-7 py-3.5 transition-all duration-400 self-start"
-                  >
-                    Enquire about this apartment
-                  </Link>
-                </div>
-              </article>
-            ))}
-          </div>
-        </div>
-      </section>
+      <ApartmentListSection apartments={apartments} lang="en" />
 
       {/* Heritage elements section */}
       <section className="bg-white py-24 md:py-32">

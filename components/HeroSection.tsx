@@ -67,7 +67,7 @@ export default function HeroSection({
       <div className="absolute inset-x-0 bottom-0 h-48 bg-gradient-to-t from-stone-950/60 to-transparent" />
 
       {/* Content */}
-      <div className={`relative z-10 max-w-7xl mx-auto w-full px-6 lg:px-12 ${align === "center" ? "flex flex-col items-center" : ""}`}>
+      <div className={`relative z-10 max-w-7xl mx-auto w-full px-6 lg:px-12 pt-28 md:pt-36 ${align === "center" ? "flex flex-col items-center" : ""}`}>
         {eyebrow && (
           <p className="label-eyebrow text-stone-300/80 mb-6">{eyebrow}</p>
         )}
