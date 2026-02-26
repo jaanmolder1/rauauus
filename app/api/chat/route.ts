@@ -30,11 +30,14 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: "No user message" }, { status: 400 });
   }
 
+  // Pass recent history (all messages before the current question) for context
+  const history = messages.slice(0, -1).slice(-6);
+
   try {
     const res = await fetch(`${CHATBOT_API_URL}/api/chat`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ question: lastUserMessage.content }),
+      body: JSON.stringify({ question: lastUserMessage.content, history }),
     });
 
     if (!res.ok) {
