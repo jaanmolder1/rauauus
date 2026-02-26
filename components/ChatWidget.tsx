@@ -18,6 +18,19 @@ function fmtPrice(n: number) {
   return new Intl.NumberFormat("et-EE", { maximumFractionDigits: 0 }).format(n) + " €";
 }
 
+const SUGGESTIONS: Record<"et" | "en", string[]> = {
+  et: [
+    "Milliseid renoveerimistöid tehti?",
+    "Mis läheduses on?",
+    "Kuidas on maja turvatud?",
+  ],
+  en: [
+    "What restoration work was carried out?",
+    "What's in the neighbourhood?",
+    "How is the building secured?",
+  ],
+};
+
 export default function ChatWidget({ apartment, lang, onClose }: ChatWidgetProps) {
   const welcomeMessage: Message = {
     role: "assistant",
@@ -33,6 +46,8 @@ export default function ChatWidget({ apartment, lang, onClose }: ChatWidgetProps
   const bottomRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
 
+  const showSuggestions = messages.length === 1 && !loading;
+
   useEffect(() => {
     bottomRef.current?.scrollIntoView({ behavior: "smooth" });
   }, [messages]);
@@ -41,9 +56,8 @@ export default function ChatWidget({ apartment, lang, onClose }: ChatWidgetProps
     inputRef.current?.focus();
   }, []);
 
-  async function sendMessage() {
-    const text = input.trim();
-    if (!text || loading) return;
+  async function sendText(text: string) {
+    if (!text.trim() || loading) return;
 
     const userMessage: Message = { role: "user", content: text };
     const nextMessages = [...messages, userMessage];
@@ -80,6 +94,10 @@ export default function ChatWidget({ apartment, lang, onClose }: ChatWidgetProps
     } finally {
       setLoading(false);
     }
+  }
+
+  function sendMessage() {
+    sendText(input.trim());
   }
 
   function handleKeyDown(e: React.KeyboardEvent<HTMLInputElement>) {
@@ -143,6 +161,21 @@ export default function ChatWidget({ apartment, lang, onClose }: ChatWidgetProps
               </div>
             </div>
           ))}
+
+          {/* Suggestion chips — visible only before the first question */}
+          {showSuggestions && (
+            <div className="flex flex-col gap-2 mt-1">
+              {SUGGESTIONS[lang].map((suggestion) => (
+                <button
+                  key={suggestion}
+                  onClick={() => sendText(suggestion)}
+                  className="self-start text-left font-sans text-sm font-light text-stone-600 bg-white border border-stone-200 px-4 py-2.5 hover:border-stone-400 hover:text-stone-900 transition-colors duration-200 shadow-sm"
+                >
+                  {suggestion}
+                </button>
+              ))}
+            </div>
+          )}
 
           {loading && (
             <div className="flex justify-start">
