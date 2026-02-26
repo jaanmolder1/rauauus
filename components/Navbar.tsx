@@ -62,7 +62,7 @@ export default function Navbar({ lang }: NavbarProps) {
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-600 ${
         scrolled
           ? "bg-stone-950/95 backdrop-blur-md border-b border-stone-800/30 py-4"
-          : "bg-stone-950/40 backdrop-blur-sm py-7"
+          : "bg-stone-950/30 py-7"
       }`}
     >
       <nav className="max-w-7xl mx-auto px-6 lg:px-12 flex items-center justify-between">
