@@ -1,11 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 
 const CHATBOT_API_URL = process.env.CHATBOT_API_URL;
-
-export async function GET() {
-  const configured = !!CHATBOT_API_URL;
-  return NextResponse.json({ configured });
-}
+const INTERNAL_API_KEY = process.env.INTERNAL_API_KEY ?? "";
 
 export async function POST(req: NextRequest) {
   if (!CHATBOT_API_URL) {
@@ -36,7 +32,10 @@ export async function POST(req: NextRequest) {
   try {
     const res = await fetch(`${CHATBOT_API_URL}/api/chat`, {
       method: "POST",
-      headers: { "Content-Type": "application/json" },
+      headers: {
+        "Content-Type": "application/json",
+        "X-Internal-Key": INTERNAL_API_KEY,
+      },
       body: JSON.stringify({ question: lastUserMessage.content, history }),
     });
 
