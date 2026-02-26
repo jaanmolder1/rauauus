@@ -25,6 +25,11 @@ const copy = {
       "Vestlusfunktsioon ei ole hetkel saadaval. Palun kirjutage meile:",
     errorGeneral:
       "Midagi läks valesti. Palun proovige uuesti või kirjutage meile:",
+    suggestions: [
+      "Milliseid renoveerimistöid tehti?",
+      "Mis läheduses on?",
+      "Kuidas on maja turvatud?",
+    ],
   },
   en: {
     buttonLabel: "Ask us",
@@ -38,6 +43,11 @@ const copy = {
       "The chat is not available at the moment. Please contact us at:",
     errorGeneral:
       "Something went wrong. Please try again or contact us at:",
+    suggestions: [
+      "What restoration work was carried out?",
+      "What's in the neighbourhood?",
+      "How is the building secured?",
+    ],
   },
 };
 
@@ -54,30 +64,17 @@ export default function FloatingChat({ lang }: FloatingChatProps) {
   const [disabled, setDisabled] = useState(false);
   const bottomRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
-  const checkedRef = useRef(false);
+
+  const showSuggestions = messages.length === 1 && !loading && !disabled;
 
   useEffect(() => {
     if (!open) return;
     bottomRef.current?.scrollIntoView({ behavior: "smooth" });
     setTimeout(() => inputRef.current?.focus(), 100);
+  }, [open, messages]);
 
-    if (checkedRef.current) return;
-    checkedRef.current = true;
-
-    fetch("/api/chat")
-      .then((r) => r.json())
-      .then((data) => {
-        if (!data.configured) {
-          setMessages([{ role: "assistant", content: t.unavailable, isError: true }]);
-          setDisabled(true);
-        }
-      })
-      .catch(() => {});
-  }, [open, messages, t.unavailable]);
-
-  async function sendMessage() {
-    const text = input.trim();
-    if (!text || loading) return;
+  async function sendText(text: string) {
+    if (!text.trim() || loading) return;
 
     const userMessage: Message = { role: "user", content: text };
     const nextMessages = [...messages, userMessage];
@@ -115,6 +112,10 @@ export default function FloatingChat({ lang }: FloatingChatProps) {
     } finally {
       setLoading(false);
     }
+  }
+
+  function sendMessage() {
+    sendText(input.trim());
   }
 
   function handleKeyDown(e: React.KeyboardEvent<HTMLInputElement>) {
@@ -200,6 +201,21 @@ export default function FloatingChat({ lang }: FloatingChatProps) {
                   </div>
                 </div>
               ))}
+
+              {/* Suggestion chips — visible only before the first question */}
+              {showSuggestions && (
+                <div className="flex flex-col gap-2 mt-1">
+                  {t.suggestions.map((suggestion) => (
+                    <button
+                      key={suggestion}
+                      onClick={() => sendText(suggestion)}
+                      className="self-start text-left font-sans text-sm font-light text-stone-600 bg-white border border-stone-200 px-4 py-2.5 hover:border-stone-400 hover:text-stone-900 transition-colors duration-200 shadow-sm"
+                    >
+                      {suggestion}
+                    </button>
+                  ))}
+                </div>
+              )}
 
               {loading && (
                 <div className="flex justify-start">
