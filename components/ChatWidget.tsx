@@ -20,14 +20,14 @@ function fmtPrice(n: number) {
 
 const SUGGESTIONS: Record<"et" | "en", string[]> = {
   et: [
-    "Milliseid renoveerimistöid tehti?",
-    "Mis läheduses on?",
-    "Kuidas on maja turvatud?",
+    "Mitu parkimiskohta on majas?",
+    "Kus on lähimad pargid?",
+    "Rääkige renoveerimistöödest.",
   ],
   en: [
-    "What restoration work was carried out?",
-    "What's in the neighbourhood?",
-    "How is the building secured?",
+    "How many parking spaces are there?",
+    "Where are the nearest parks?",
+    "Tell me about the renovations.",
   ],
 };
 

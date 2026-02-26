@@ -26,9 +26,9 @@ const copy = {
     errorGeneral:
       "Midagi läks valesti. Palun proovige uuesti või kirjutage meile:",
     suggestions: [
-      "Milliseid renoveerimistöid tehti?",
-      "Mis läheduses on?",
-      "Kuidas on maja turvatud?",
+      "Mitu parkimiskohta on majas?",
+      "Kus on lähimad pargid?",
+      "Rääkige renoveerimistöödest.",
     ],
   },
   en: {
@@ -44,9 +44,9 @@ const copy = {
     errorGeneral:
       "Something went wrong. Please try again or contact us at:",
     suggestions: [
-      "What restoration work was carried out?",
-      "What's in the neighbourhood?",
-      "How is the building secured?",
+      "How many parking spaces are there?",
+      "Where are the nearest parks?",
+      "Tell me about the renovations.",
     ],
   },
 };
