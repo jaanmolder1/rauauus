@@ -40,6 +40,7 @@ export default function ChatWidget({ apartment, lang, onClose }: ChatWidgetProps
         : `Hello! I'm here to answer your questions about ${apartment.number} (${apartment.area}, ${apartment.floor}, ${fmtPrice(apartment.price)}). What would you like to know?`,
   };
 
+  const [sessionId] = useState(() => crypto.randomUUID());
   const [messages, setMessages] = useState<Message[]>([welcomeMessage]);
   const [input, setInput] = useState("");
   const [loading, setLoading] = useState(false);
@@ -73,6 +74,7 @@ export default function ChatWidget({ apartment, lang, onClose }: ChatWidgetProps
           messages: nextMessages,
           apartmentId: apartment.id,
           lang,
+          sessionId,
         }),
       });
 

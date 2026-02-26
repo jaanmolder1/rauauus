@@ -9,9 +9,11 @@ export async function POST(req: NextRequest) {
   }
 
   let messages: { role: string; content: string }[];
+  let sessionId = "";
   try {
     const body = await req.json();
     messages = body.messages;
+    sessionId = typeof body.sessionId === "string" ? body.sessionId.slice(0, 64) : "";
   } catch {
     return NextResponse.json({ error: "Invalid request" }, { status: 400 });
   }
@@ -36,7 +38,7 @@ export async function POST(req: NextRequest) {
         "Content-Type": "application/json",
         "X-Internal-Key": INTERNAL_API_KEY,
       },
-      body: JSON.stringify({ question: lastUserMessage.content, history }),
+      body: JSON.stringify({ question: lastUserMessage.content, history, session_id: sessionId }),
     });
 
     if (!res.ok) {

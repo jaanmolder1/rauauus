@@ -55,6 +55,7 @@ const EMAIL = "info@raua22.ee";
 
 export default function FloatingChat({ lang }: FloatingChatProps) {
   const t = copy[lang];
+  const [sessionId] = useState(() => crypto.randomUUID());
   const [open, setOpen] = useState(false);
   const [messages, setMessages] = useState<Message[]>([
     { role: "assistant", content: t.welcome },
@@ -89,6 +90,7 @@ export default function FloatingChat({ lang }: FloatingChatProps) {
         body: JSON.stringify({
           messages: nextMessages.map(({ role, content }) => ({ role, content })),
           lang,
+          sessionId,
         }),
       });
 
