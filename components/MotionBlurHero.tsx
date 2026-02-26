@@ -293,24 +293,6 @@ export default function MotionBlurHero({ slides, autoPlayMs = 5000, ctaLabel, ct
         )}
       </div>
 
-      {/* Scroll indicator — outside the fading div, always visible */}
-      <div className="absolute bottom-16 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 pointer-events-none">
-        <div className="w-5 h-8 rounded-full border border-stone-100/40 flex justify-center pt-1.5">
-          <div
-            className="w-0.5 h-1.5 rounded-full bg-stone-100/70"
-            style={{ animation: "scrollWheel 1.6s ease-in-out infinite" }}
-          />
-        </div>
-        <style>{`
-          @keyframes scrollWheel {
-            0%   { transform: translateY(0);   opacity: 1; }
-            60%  { transform: translateY(6px); opacity: 0; }
-            61%  { transform: translateY(0);   opacity: 0; }
-            100% { transform: translateY(0);   opacity: 1; }
-          }
-        `}</style>
-      </div>
-
       {/* Prev / Next arrows */}
       <button
         onClick={() => goTo((activeRef.current - 1 + slides.length) % slides.length)}
